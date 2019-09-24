@@ -1,0 +1,12 @@
+C:\FAN.Projects\FAN.WindowsService\FAN.MongoDB.Service\bin\Release\FAN.MongoDB.Service.exe.config
+C:\FAN.Projects\FAN.WindowsService\FAN.MongoDB.Service\bin\Release\FAN.MongoDB.Service.exe
+C:\FAN.Projects\FAN.WindowsService\FAN.MongoDB.Service\bin\Release\FAN.MongoDB.Service.pdb
+C:\FAN.Projects\FAN.WindowsService\FAN.MongoDB.Service\bin\Release\FAN.MongoDB.Host.dll
+C:\FAN.Projects\FAN.WindowsService\FAN.MongoDB.Service\bin\Release\Quartz.dll
+C:\FAN.Projects\FAN.WindowsService\FAN.MongoDB.Service\bin\Release\Common.Logging.dll
+C:\FAN.Projects\FAN.WindowsService\FAN.MongoDB.Service\bin\Release\FAN.MongoDB.Host.pdb
+C:\FAN.Projects\FAN.WindowsService\FAN.MongoDB.Service\obj\Release\FAN.MongoDB.Service.csprojResolveAssemblyReference.cache
+C:\FAN.Projects\FAN.WindowsService\FAN.MongoDB.Service\obj\Release\FAN.MongoDB.Service.ProjectInstaller.resources
+C:\FAN.Projects\FAN.WindowsService\FAN.MongoDB.Service\obj\Release\FAN.MongoDB.Service.csproj.GenerateResource.Cache
+C:\FAN.Projects\FAN.WindowsService\FAN.MongoDB.Service\obj\Release\FAN.MongoDB.Service.exe
+C:\FAN.Projects\FAN.WindowsService\FAN.MongoDB.Service\obj\Release\FAN.MongoDB.Service.pdb

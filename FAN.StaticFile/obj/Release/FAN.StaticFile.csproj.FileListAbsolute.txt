@@ -1,0 +1,44 @@
+C:\Users\Administrator\Documents\Visual Studio 2015\Projects\FAN.Projects\FAN.StaticFile\bin\roslyn\csc.exe
+C:\Users\Administrator\Documents\Visual Studio 2015\Projects\FAN.Projects\FAN.StaticFile\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+C:\Users\Administrator\Documents\Visual Studio 2015\Projects\FAN.Projects\FAN.StaticFile\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+C:\Users\Administrator\Documents\Visual Studio 2015\Projects\FAN.Projects\FAN.StaticFile\bin\roslyn\Microsoft.CodeAnalysis.dll
+C:\Users\Administrator\Documents\Visual Studio 2015\Projects\FAN.Projects\FAN.StaticFile\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+C:\Users\Administrator\Documents\Visual Studio 2015\Projects\FAN.Projects\FAN.StaticFile\bin\roslyn\Microsoft.CSharp.Core.targets
+C:\Users\Administrator\Documents\Visual Studio 2015\Projects\FAN.Projects\FAN.StaticFile\bin\roslyn\Microsoft.VisualBasic.Core.targets
+C:\Users\Administrator\Documents\Visual Studio 2015\Projects\FAN.Projects\FAN.StaticFile\bin\roslyn\System.Collections.Immutable.dll
+C:\Users\Administrator\Documents\Visual Studio 2015\Projects\FAN.Projects\FAN.StaticFile\bin\roslyn\System.Reflection.Metadata.dll
+C:\Users\Administrator\Documents\Visual Studio 2015\Projects\FAN.Projects\FAN.StaticFile\bin\roslyn\vbc.exe
+C:\Users\Administrator\Documents\Visual Studio 2015\Projects\FAN.Projects\FAN.StaticFile\bin\roslyn\VBCSCompiler.exe
+C:\Users\Administrator\Documents\Visual Studio 2015\Projects\FAN.Projects\FAN.StaticFile\bin\roslyn\VBCSCompiler.exe.config
+C:\Users\Administrator\Documents\Visual Studio 2015\Projects\FAN.Projects\FAN.StaticFile\bin\FAN.StaticFile.dll.config
+C:\Users\Administrator\Documents\Visual Studio 2015\Projects\FAN.Projects\FAN.StaticFile\bin\FAN.StaticFile.dll
+C:\Users\Administrator\Documents\Visual Studio 2015\Projects\FAN.Projects\FAN.StaticFile\bin\FAN.StaticFile.pdb
+C:\Users\Administrator\Documents\Visual Studio 2015\Projects\FAN.Projects\FAN.StaticFile\bin\FAN.WebStyle.dll
+C:\Users\Administrator\Documents\Visual Studio 2015\Projects\FAN.Projects\FAN.StaticFile\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+C:\Users\Administrator\Documents\Visual Studio 2015\Projects\FAN.Projects\FAN.StaticFile\bin\FAN.WebStyle.pdb
+C:\Users\Administrator\Documents\Visual Studio 2015\Projects\FAN.Projects\FAN.StaticFile\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+C:\Users\Administrator\Documents\Visual Studio 2015\Projects\FAN.Projects\FAN.StaticFile\obj\Release\FAN.StaticFile.csprojResolveAssemblyReference.cache
+C:\Users\Administrator\Documents\Visual Studio 2015\Projects\FAN.Projects\FAN.StaticFile\obj\Release\FAN.StaticFile.dll
+C:\Users\Administrator\Documents\Visual Studio 2015\Projects\FAN.Projects\FAN.StaticFile\obj\Release\FAN.StaticFile.pdb
+C:\FAN.Projects\FAN.StaticFile\bin\roslyn\csc.exe
+C:\FAN.Projects\FAN.StaticFile\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+C:\FAN.Projects\FAN.StaticFile\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+C:\FAN.Projects\FAN.StaticFile\bin\roslyn\Microsoft.CodeAnalysis.dll
+C:\FAN.Projects\FAN.StaticFile\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+C:\FAN.Projects\FAN.StaticFile\bin\roslyn\Microsoft.CSharp.Core.targets
+C:\FAN.Projects\FAN.StaticFile\bin\roslyn\Microsoft.VisualBasic.Core.targets
+C:\FAN.Projects\FAN.StaticFile\bin\roslyn\System.Collections.Immutable.dll
+C:\FAN.Projects\FAN.StaticFile\bin\roslyn\System.Reflection.Metadata.dll
+C:\FAN.Projects\FAN.StaticFile\bin\roslyn\vbc.exe
+C:\FAN.Projects\FAN.StaticFile\bin\roslyn\VBCSCompiler.exe
+C:\FAN.Projects\FAN.StaticFile\bin\roslyn\VBCSCompiler.exe.config
+C:\FAN.Projects\FAN.StaticFile\bin\FAN.StaticFile.dll.config
+C:\FAN.Projects\FAN.StaticFile\bin\FAN.StaticFile.dll
+C:\FAN.Projects\FAN.StaticFile\bin\FAN.StaticFile.pdb
+C:\FAN.Projects\FAN.StaticFile\bin\FAN.WebStyle.dll
+C:\FAN.Projects\FAN.StaticFile\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+C:\FAN.Projects\FAN.StaticFile\bin\FAN.WebStyle.pdb
+C:\FAN.Projects\FAN.StaticFile\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+C:\FAN.Projects\FAN.StaticFile\obj\Release\FAN.StaticFile.csprojResolveAssemblyReference.cache
+C:\FAN.Projects\FAN.StaticFile\obj\Release\FAN.StaticFile.dll
+C:\FAN.Projects\FAN.StaticFile\obj\Release\FAN.StaticFile.pdb

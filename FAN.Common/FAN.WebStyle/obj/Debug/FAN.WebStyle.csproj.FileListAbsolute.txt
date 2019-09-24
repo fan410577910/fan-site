@@ -1,0 +1,10 @@
+C:\Users\Administrator\Documents\Visual Studio 2015\Projects\FAN.Projects\FAN.Common\FAN.WebStyle\obj\Debug\FAN.WebStyle.csprojResolveAssemblyReference.cache
+C:\Users\Administrator\Documents\Visual Studio 2015\Projects\FAN.Projects\FAN.Common\FAN.WebStyle\bin\Debug\FAN.WebStyle.dll
+C:\Users\Administrator\Documents\Visual Studio 2015\Projects\FAN.Projects\FAN.Common\FAN.WebStyle\bin\Debug\FAN.WebStyle.pdb
+C:\Users\Administrator\Documents\Visual Studio 2015\Projects\FAN.Projects\FAN.Common\FAN.WebStyle\obj\Debug\FAN.WebStyle.dll
+C:\Users\Administrator\Documents\Visual Studio 2015\Projects\FAN.Projects\FAN.Common\FAN.WebStyle\obj\Debug\FAN.WebStyle.pdb
+C:\FAN.Projects\FAN.Common\FAN.WebStyle\bin\Debug\FAN.WebStyle.dll
+C:\FAN.Projects\FAN.Common\FAN.WebStyle\bin\Debug\FAN.WebStyle.pdb
+C:\FAN.Projects\FAN.Common\FAN.WebStyle\obj\Debug\FAN.WebStyle.csprojResolveAssemblyReference.cache
+C:\FAN.Projects\FAN.Common\FAN.WebStyle\obj\Debug\FAN.WebStyle.dll
+C:\FAN.Projects\FAN.Common\FAN.WebStyle\obj\Debug\FAN.WebStyle.pdb

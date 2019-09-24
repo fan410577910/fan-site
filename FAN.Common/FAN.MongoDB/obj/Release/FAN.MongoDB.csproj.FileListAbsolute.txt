@@ -1,0 +1,7 @@
+C:\FAN.Projects\FAN.Common\FAN.MongoDB\bin\Release\FAN.MongoDB.dll
+C:\FAN.Projects\FAN.Common\FAN.MongoDB\bin\Release\FAN.MongoDB.pdb
+C:\FAN.Projects\FAN.Common\FAN.MongoDB\bin\Release\MongoDB.Bson.dll
+C:\FAN.Projects\FAN.Common\FAN.MongoDB\bin\Release\MongoDB.Driver.dll
+C:\FAN.Projects\FAN.Common\FAN.MongoDB\obj\Release\FAN.MongoDB.csprojResolveAssemblyReference.cache
+C:\FAN.Projects\FAN.Common\FAN.MongoDB\obj\Release\FAN.MongoDB.dll
+C:\FAN.Projects\FAN.Common\FAN.MongoDB\obj\Release\FAN.MongoDB.pdb

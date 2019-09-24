@@ -1,0 +1,5 @@
+C:\FAN.Projects\FAN.DB\FAN.Enum\bin\Release\FAN.Enum.dll
+C:\FAN.Projects\FAN.DB\FAN.Enum\bin\Release\FAN.Enum.pdb
+C:\FAN.Projects\FAN.DB\FAN.Enum\obj\Release\FAN.Enum.dll
+C:\FAN.Projects\FAN.DB\FAN.Enum\obj\Release\FAN.Enum.pdb
+C:\FAN.Projects\FAN.DB\FAN.Enum\obj\Release\FAN.Enum.csprojResolveAssemblyReference.cache

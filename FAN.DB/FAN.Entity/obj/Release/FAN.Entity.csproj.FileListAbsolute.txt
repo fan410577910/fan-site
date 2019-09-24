@@ -1,0 +1,12 @@
+C:\Users\Administrator\Documents\Visual Studio 2015\Projects\FAN.Projects\FAN.DB\FAN.Entity\bin\Release\FAN.Entity.dll
+C:\Users\Administrator\Documents\Visual Studio 2015\Projects\FAN.Projects\FAN.DB\FAN.Entity\bin\Release\FAN.Entity.pdb
+C:\Users\Administrator\Documents\Visual Studio 2015\Projects\FAN.Projects\FAN.DB\FAN.Entity\obj\Release\FAN.Entity.csprojResolveAssemblyReference.cache
+C:\Users\Administrator\Documents\Visual Studio 2015\Projects\FAN.Projects\FAN.DB\FAN.Entity\obj\Release\FAN.Entity.dll
+C:\Users\Administrator\Documents\Visual Studio 2015\Projects\FAN.Projects\FAN.DB\FAN.Entity\obj\Release\FAN.Entity.pdb
+C:\FAN.Projects\FAN.DB\FAN.Entity\bin\Release\FAN.Entity.dll
+C:\FAN.Projects\FAN.DB\FAN.Entity\bin\Release\FAN.Entity.pdb
+C:\FAN.Projects\FAN.DB\FAN.Entity\obj\Release\FAN.Entity.csprojResolveAssemblyReference.cache
+C:\FAN.Projects\FAN.DB\FAN.Entity\obj\Release\FAN.Entity.dll
+C:\FAN.Projects\FAN.DB\FAN.Entity\obj\Release\FAN.Entity.pdb
+C:\FAN.Projects\FAN.DB\FAN.Entity\bin\Release\FAN.Model.dll
+C:\FAN.Projects\FAN.DB\FAN.Entity\bin\Release\FAN.Model.pdb

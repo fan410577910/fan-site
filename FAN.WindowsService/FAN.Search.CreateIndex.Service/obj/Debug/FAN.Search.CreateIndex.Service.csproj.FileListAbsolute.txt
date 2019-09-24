@@ -1,0 +1,5 @@
+C:\FAN.Projects\FAN.WindowsService\FAN.Search.CreateIndex.Service\bin\Debug\FAN.Search.CreateIndex.Service.exe.config
+C:\FAN.Projects\FAN.WindowsService\FAN.Search.CreateIndex.Service\bin\Debug\FAN.Search.CreateIndex.Service.exe
+C:\FAN.Projects\FAN.WindowsService\FAN.Search.CreateIndex.Service\bin\Debug\FAN.Search.CreateIndex.Service.pdb
+C:\FAN.Projects\FAN.WindowsService\FAN.Search.CreateIndex.Service\obj\Debug\FAN.Search.CreateIndex.Service.exe
+C:\FAN.Projects\FAN.WindowsService\FAN.Search.CreateIndex.Service\obj\Debug\FAN.Search.CreateIndex.Service.pdb

@@ -1,0 +1,9 @@
+E:\FAN.Projects\WindowsService1\bin\Release\WindowsService1.exe.config
+E:\FAN.Projects\WindowsService1\bin\Release\WindowsService1.exe
+E:\FAN.Projects\WindowsService1\bin\Release\WindowsService1.pdb
+E:\FAN.Projects\WindowsService1\obj\Release\WindowsService1.csprojAssemblyReference.cache
+E:\FAN.Projects\WindowsService1\obj\Release\WindowsService1.ProjectInstaller.resources
+E:\FAN.Projects\WindowsService1\obj\Release\WindowsService1.csproj.GenerateResource.cache
+E:\FAN.Projects\WindowsService1\obj\Release\WindowsService1.csproj.CoreCompileInputs.cache
+E:\FAN.Projects\WindowsService1\obj\Release\WindowsService1.exe
+E:\FAN.Projects\WindowsService1\obj\Release\WindowsService1.pdb

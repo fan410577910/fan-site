@@ -1,0 +1,181 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{A3E0B9E7-F20A-42CF-B5F6-90F06AB14C6F}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>FAN.DLLs</RootNamespace>
+    <AssemblyName>FAN.DLLs</AssemblyName>
+    <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="AutoMapper, Version=6.2.2.0, Culture=neutral, PublicKeyToken=be96cd2c38ef1005, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\AutoMapper.6.2.2\lib\net45\AutoMapper.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="packages.config" />
+    <None Include="SolrNet.chm" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="AntiXSSLibrary.dll" />
+    <Content Include="Antlr3.Runtime.dll" />
+    <Content Include="AutoMapper.dll" />
+    <Content Include="AutoMapper.xml" />
+    <Content Include="BouncyCastle.Crypto.dll" />
+    <Content Include="Braintree-2.61.0.dll" />
+    <Content Include="C5.dll" />
+    <Content Include="chasen233.exe" />
+    <Content Include="ChasenForCS.dll" />
+    <Content Include="Common.Logging.dll" />
+    <Content Include="Dapper.dll" />
+    <Content Include="DC.Web.HttpCompress.dll" />
+    <Content Include="DocX.dll" />
+    <Content Include="DynamicExpresso.dll" />
+    <Content Include="EasyNetQ.dll" />
+    <Content Include="EcmaScript.NET.dll" />
+    <Content Include="ExpressionEvaluator.dll" />
+    <Content Include="FirebaseNet.dll" />
+    <Content Include="GeetestSDK.dll" />
+    <Content Include="GeoAPI.dll" />
+    <Content Include="guetzli_windows_x86-64.exe" />
+    <Content Include="HtmlAgilityPack.dll" />
+    <Content Include="HttpTwo.dll" />
+    <Content Include="HttpTwo.HPack.dll" />
+    <Content Include="Hubble.Analyzer.dll" />
+    <Content Include="Hubble.Core.dll" />
+    <Content Include="Hubble.Framework.dll" />
+    <Content Include="Hubble.SQLClient.dll" />
+    <Content Include="ICSharpCode.SharpZipLib.dll" />
+    <Content Include="Ivony.Core.dll" />
+    <Content Include="Ivony.Html.dll" />
+    <Content Include="Ivony.Html.Parser.dll" />
+    <Content Include="Ivony.Html.Parser.Regulars.dll" />
+    <Content Include="jose-jwt.dll" />
+    <Content Include="jpegtran.exe" />
+    <Content Include="libjpeg-62.dll" />
+    <Content Include="LibNMeCab.dll" />
+    <Content Include="log4net.dll" />
+    <Content Include="Lucene.Net.Contrib.Analyzers.dll" />
+    <Content Include="Lucene.Net.Contrib.Highlighter.dll" />
+    <Content Include="Lucene.Net.Contrib.Memory.dll" />
+    <Content Include="Lucene.Net.Contrib.Snowball.dll" />
+    <Content Include="Lucene.Net.CWSharp.dll" />
+    <Content Include="Lucene.Net.dll" />
+    <Content Include="Magick.NET-AnyCPU.dll" />
+    <Content Include="Magick.NET-x64.dll" />
+    <Content Include="MathNet.Numerics.dll" />
+    <Content Include="MathNet.Numerics.IO.dll" />
+    <Content Include="Md5Coder.dll" />
+    <Content Include="mecab-0.98.exe" />
+    <Content Include="MecabDotNet.dll" />
+    <Content Include="Microsoft.Practices.ServiceLocation.dll" />
+    <Content Include="Microsoft.Threading.Tasks.dll" />
+    <Content Include="Microsoft.Web.Administration.dll" />
+    <Content Include="Microsoft.Web.Infrastructure.dll" />
+    <Content Include="MongoDB.Bson.dll" />
+    <Content Include="MongoDB.Driver.dll" />
+    <Content Include="MyMediaLite.dll" />
+    <Content Include="MySql.Data.dll" />
+    <Content Include="MySql.Web.dll" />
+    <Content Include="NetTopologySuite.dll" />
+    <Content Include="Newtonsoft.Json.dll" />
+    <Content Include="Noesis.Drawing.Imaging.WebP.dll" />
+    <Content Include="NoesisWebP.dll" />
+    <Content Include="NPOI.dll" />
+    <Content Include="NPOI.OOXML.dll" />
+    <Content Include="NPOI.OpenXml4Net.dll" />
+    <Content Include="NPOI.OpenXmlFormats.dll" />
+    <Content Include="NVelocity.dll" />
+    <Content Include="PanGu.dll" />
+    <Content Include="PanGu.Lucene.Analyzer.dll" />
+    <Content Include="PayPalCoreSDK.dll" />
+    <Content Include="PayPalMerchantSDK.dll" />
+    <Content Include="paypal_base.dll" />
+    <Content Include="PowerCollections.dll" />
+    <Content Include="PushSharp.Apple.dll" />
+    <Content Include="PushSharp.Core.dll" />
+    <Content Include="PushSharp.Google.dll" />
+    <Content Include="Quartz.dll" />
+    <Content Include="RabbitMQ.Client.dll" />
+    <Content Include="RabbitMQ.ServiceModel.dll" />
+    <Content Include="ReadOnlyCollectionsInterfaces.dll" />
+    <Content Include="ServiceStack.Common.dll" />
+    <Content Include="ServiceStack.Interfaces.dll" />
+    <Content Include="ServiceStack.Redis.dll" />
+    <Content Include="ServiceStack.Text.dll" />
+    <Content Include="SharpRaven.dll" />
+    <Content Include="SolrNet.dll" />
+    <Content Include="Spatial4n.Core.dll" />
+    <Content Include="Spatial4n.Core.NTS.dll" />
+    <Content Include="StackExchange.Redis.dll" />
+    <Content Include="System.Collections.Immutable.Net40.dll" />
+    <Content Include="System.Net.Http.dll" />
+    <Content Include="System.Net.Http.Formatting.dll" />
+    <Content Include="System.Net.Http.WebRequest.dll" />
+    <Content Include="System.Web.Helpers.dll" />
+    <Content Include="System.Web.Http.dll" />
+    <Content Include="System.Web.Http.WebHost.dll" />
+    <Content Include="System.Web.Mvc.dll" />
+    <Content Include="System.Web.Optimization.dll" />
+    <Content Include="System.Web.Razor.dll" />
+    <Content Include="System.Web.WebPages.Deployment.dll" />
+    <Content Include="System.Web.WebPages.dll" />
+    <Content Include="System.Web.WebPages.Razor.dll" />
+    <Content Include="TaskScheduler.dll" />
+    <Content Include="Tidebuy.RabbitMQ.dll" />
+    <Content Include="Tidebuy.SSO.SDK.dll" />
+    <Content Include="TLZ.COM.Module.Search.Model.dll" />
+    <Content Include="TLZ.COM.Search.SiteGroup.WebSite.dll" />
+    <Content Include="TransClient.dll" />
+    <Content Include="WebGrease.dll" />
+    <Content Include="WebMarkupMin.Core.dll" />
+    <Content Include="WebMarkupMin.Mvc.dll" />
+    <Content Include="WebMarkupMin.Web.dll" />
+    <Content Include="WebPConvert.exe" />
+    <Content Include="Yahoo.Yui.Compressor.dll" />
+    <Content Include="Yamool.CWSharp.dll" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

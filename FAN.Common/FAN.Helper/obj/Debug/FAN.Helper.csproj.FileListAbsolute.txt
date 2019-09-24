@@ -1,0 +1,85 @@
+C:\Users\Administrator\Documents\Visual Studio 2015\Projects\FAN.Projects\FAN.Common\FAN.Helper\bin\Debug\FAN.Helper.dll
+C:\Users\Administrator\Documents\Visual Studio 2015\Projects\FAN.Projects\FAN.Common\FAN.Helper\bin\Debug\FAN.Helper.pdb
+C:\Users\Administrator\Documents\Visual Studio 2015\Projects\FAN.Projects\FAN.Common\FAN.Helper\bin\Debug\Newtonsoft.Json.dll
+C:\Users\Administrator\Documents\Visual Studio 2015\Projects\FAN.Projects\FAN.Common\FAN.Helper\obj\Debug\FAN.Helper.csprojResolveAssemblyReference.cache
+C:\Users\Administrator\Documents\Visual Studio 2015\Projects\FAN.Projects\FAN.Common\FAN.Helper\obj\Debug\FAN.Helper.dll
+C:\Users\Administrator\Documents\Visual Studio 2015\Projects\FAN.Projects\FAN.Common\FAN.Helper\obj\Debug\FAN.Helper.pdb
+C:\Users\Administrator\Documents\Visual Studio 2015\Projects\FAN.Projects\FAN.Common\FAN.Helper\bin\Debug\AntiXSSLibrary.dll
+C:\Users\Administrator\Documents\Visual Studio 2015\Projects\FAN.Projects\FAN.Common\FAN.Helper\bin\Debug\BouncyCastle.Crypto.dll
+C:\Users\Administrator\Documents\Visual Studio 2015\Projects\FAN.Projects\FAN.Common\FAN.Helper\bin\Debug\DocX.dll
+C:\Users\Administrator\Documents\Visual Studio 2015\Projects\FAN.Projects\FAN.Common\FAN.Helper\bin\Debug\DynamicExpresso.dll
+C:\Users\Administrator\Documents\Visual Studio 2015\Projects\FAN.Projects\FAN.Common\FAN.Helper\bin\Debug\Microsoft.Web.Administration.dll
+C:\Users\Administrator\Documents\Visual Studio 2015\Projects\FAN.Projects\FAN.Common\FAN.Helper\bin\Debug\Microsoft.Web.Infrastructure.dll
+C:\Users\Administrator\Documents\Visual Studio 2015\Projects\FAN.Projects\FAN.Common\FAN.Helper\bin\Debug\NPOI.dll
+C:\Users\Administrator\Documents\Visual Studio 2015\Projects\FAN.Projects\FAN.Common\FAN.Helper\bin\Debug\NPOI.OOXML.dll
+C:\Users\Administrator\Documents\Visual Studio 2015\Projects\FAN.Projects\FAN.Common\FAN.Helper\bin\Debug\NPOI.OpenXml4Net.dll
+C:\Users\Administrator\Documents\Visual Studio 2015\Projects\FAN.Projects\FAN.Common\FAN.Helper\bin\Debug\NPOI.OpenXmlFormats.dll
+C:\Users\Administrator\Documents\Visual Studio 2015\Projects\FAN.Projects\FAN.Common\FAN.Helper\bin\Debug\System.Net.Http.Formatting.dll
+C:\Users\Administrator\Documents\Visual Studio 2015\Projects\FAN.Projects\FAN.Common\FAN.Helper\bin\Debug\TLZ.SharpZLib.dll
+C:\Users\Administrator\Documents\Visual Studio 2015\Projects\FAN.Projects\FAN.Common\FAN.Helper\bin\Debug\WebGrease.dll
+C:\Users\Administrator\Documents\Visual Studio 2015\Projects\FAN.Projects\FAN.Common\FAN.Helper\bin\Debug\Yahoo.Yui.Compressor.dll
+C:\Users\Administrator\Documents\Visual Studio 2015\Projects\FAN.Projects\FAN.Common\FAN.Helper\bin\Debug\ICSharpCode.SharpZipLib.dll
+C:\Users\Administrator\Documents\Visual Studio 2015\Projects\FAN.Projects\FAN.Common\FAN.Helper\bin\Debug\EcmaScript.NET.dll
+C:\Users\Administrator\Documents\Visual Studio 2015\Projects\FAN.Projects\FAN.Common\FAN.Helper\bin\Debug\DynamicExpresso.pdb
+C:\Users\Administrator\Documents\Visual Studio 2015\Projects\FAN.Projects\FAN.Common\FAN.Helper\bin\Debug\TLZ.SharpZLib.pdb
+C:\Users\Administrator\Documents\Visual Studio 2015\Projects\FAN.Projects\FAN.Common\FAN.Helper\bin\Debug\AutoMapper.dll
+C:\Users\Administrator\Documents\Visual Studio 2015\Projects\FAN.Projects\FAN.Common\FAN.Helper\bin\Debug\FAN.Helper.dll.config
+C:\Users\Administrator\Documents\Visual Studio 2015\Projects\FAN.Projects\FAN.Common\FAN.Helper\bin\Debug\AutoMapper.xml
+C:\FAN.Projects\FAN.Common\FAN.Helper\bin\Debug\FAN.Helper.dll.config
+C:\FAN.Projects\FAN.Common\FAN.Helper\bin\Debug\FAN.Helper.dll
+C:\FAN.Projects\FAN.Common\FAN.Helper\bin\Debug\FAN.Helper.pdb
+C:\FAN.Projects\FAN.Common\FAN.Helper\bin\Debug\AntiXSSLibrary.dll
+C:\FAN.Projects\FAN.Common\FAN.Helper\bin\Debug\AutoMapper.dll
+C:\FAN.Projects\FAN.Common\FAN.Helper\bin\Debug\BouncyCastle.Crypto.dll
+C:\FAN.Projects\FAN.Common\FAN.Helper\bin\Debug\DocX.dll
+C:\FAN.Projects\FAN.Common\FAN.Helper\bin\Debug\DynamicExpresso.dll
+C:\FAN.Projects\FAN.Common\FAN.Helper\bin\Debug\Microsoft.Web.Administration.dll
+C:\FAN.Projects\FAN.Common\FAN.Helper\bin\Debug\Microsoft.Web.Infrastructure.dll
+C:\FAN.Projects\FAN.Common\FAN.Helper\bin\Debug\Newtonsoft.Json.dll
+C:\FAN.Projects\FAN.Common\FAN.Helper\bin\Debug\NPOI.dll
+C:\FAN.Projects\FAN.Common\FAN.Helper\bin\Debug\NPOI.OOXML.dll
+C:\FAN.Projects\FAN.Common\FAN.Helper\bin\Debug\NPOI.OpenXml4Net.dll
+C:\FAN.Projects\FAN.Common\FAN.Helper\bin\Debug\NPOI.OpenXmlFormats.dll
+C:\FAN.Projects\FAN.Common\FAN.Helper\bin\Debug\System.Net.Http.Formatting.dll
+C:\FAN.Projects\FAN.Common\FAN.Helper\bin\Debug\TLZ.SharpZLib.dll
+C:\FAN.Projects\FAN.Common\FAN.Helper\bin\Debug\WebGrease.dll
+C:\FAN.Projects\FAN.Common\FAN.Helper\bin\Debug\Yahoo.Yui.Compressor.dll
+C:\FAN.Projects\FAN.Common\FAN.Helper\bin\Debug\ICSharpCode.SharpZipLib.dll
+C:\FAN.Projects\FAN.Common\FAN.Helper\bin\Debug\EcmaScript.NET.dll
+C:\FAN.Projects\FAN.Common\FAN.Helper\bin\Debug\DynamicExpresso.pdb
+C:\FAN.Projects\FAN.Common\FAN.Helper\bin\Debug\TLZ.SharpZLib.pdb
+C:\FAN.Projects\FAN.Common\FAN.Helper\bin\Debug\AutoMapper.xml
+C:\FAN.Projects\FAN.Common\FAN.Helper\obj\Debug\FAN.Helper.dll
+C:\FAN.Projects\FAN.Common\FAN.Helper\obj\Debug\FAN.Helper.pdb
+C:\FAN.Projects\FAN.Common\FAN.Helper\obj\Debug\FAN.Helper.csprojAssemblyReference.cache
+C:\FAN.Projects\FAN.Common\FAN.Helper\obj\Debug\FAN.Helper.csproj.CoreCompileInputs.cache
+C:\FAN.Projects\FAN.Common\FAN.Helper\obj\Debug\FAN.Helper.csproj.CopyComplete
+E:\FAN.Projects\FAN.Common\FAN.Helper\bin\Debug\FAN.Helper.dll.config
+E:\FAN.Projects\FAN.Common\FAN.Helper\bin\Debug\FAN.Helper.dll
+E:\FAN.Projects\FAN.Common\FAN.Helper\bin\Debug\FAN.Helper.pdb
+E:\FAN.Projects\FAN.Common\FAN.Helper\bin\Debug\AntiXSSLibrary.dll
+E:\FAN.Projects\FAN.Common\FAN.Helper\bin\Debug\AutoMapper.dll
+E:\FAN.Projects\FAN.Common\FAN.Helper\bin\Debug\BouncyCastle.Crypto.dll
+E:\FAN.Projects\FAN.Common\FAN.Helper\bin\Debug\DocX.dll
+E:\FAN.Projects\FAN.Common\FAN.Helper\bin\Debug\DynamicExpresso.dll
+E:\FAN.Projects\FAN.Common\FAN.Helper\bin\Debug\Microsoft.Web.Administration.dll
+E:\FAN.Projects\FAN.Common\FAN.Helper\bin\Debug\Microsoft.Web.Infrastructure.dll
+E:\FAN.Projects\FAN.Common\FAN.Helper\bin\Debug\Newtonsoft.Json.dll
+E:\FAN.Projects\FAN.Common\FAN.Helper\bin\Debug\NPOI.dll
+E:\FAN.Projects\FAN.Common\FAN.Helper\bin\Debug\NPOI.OOXML.dll
+E:\FAN.Projects\FAN.Common\FAN.Helper\bin\Debug\NPOI.OpenXml4Net.dll
+E:\FAN.Projects\FAN.Common\FAN.Helper\bin\Debug\NPOI.OpenXmlFormats.dll
+E:\FAN.Projects\FAN.Common\FAN.Helper\bin\Debug\System.Net.Http.Formatting.dll
+E:\FAN.Projects\FAN.Common\FAN.Helper\bin\Debug\TLZ.SharpZLib.dll
+E:\FAN.Projects\FAN.Common\FAN.Helper\bin\Debug\WebGrease.dll
+E:\FAN.Projects\FAN.Common\FAN.Helper\bin\Debug\Yahoo.Yui.Compressor.dll
+E:\FAN.Projects\FAN.Common\FAN.Helper\bin\Debug\ICSharpCode.SharpZipLib.dll
+E:\FAN.Projects\FAN.Common\FAN.Helper\bin\Debug\EcmaScript.NET.dll
+E:\FAN.Projects\FAN.Common\FAN.Helper\bin\Debug\DynamicExpresso.pdb
+E:\FAN.Projects\FAN.Common\FAN.Helper\bin\Debug\TLZ.SharpZLib.pdb
+E:\FAN.Projects\FAN.Common\FAN.Helper\bin\Debug\AutoMapper.xml
+E:\FAN.Projects\FAN.Common\FAN.Helper\obj\Debug\FAN.Helper.csprojAssemblyReference.cache
+E:\FAN.Projects\FAN.Common\FAN.Helper\obj\Debug\FAN.Helper.csproj.CoreCompileInputs.cache
+E:\FAN.Projects\FAN.Common\FAN.Helper\obj\Debug\FAN.Helper.csproj.CopyComplete
+E:\FAN.Projects\FAN.Common\FAN.Helper\obj\Debug\FAN.Helper.dll
+E:\FAN.Projects\FAN.Common\FAN.Helper\obj\Debug\FAN.Helper.pdb

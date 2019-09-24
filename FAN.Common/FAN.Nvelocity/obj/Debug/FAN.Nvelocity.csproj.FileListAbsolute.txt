@@ -1,0 +1,52 @@
+C:\Users\Administrator\Documents\Visual Studio 2015\Projects\FAN.Projects\FAN.Common\FAN.Nvelocity\bin\Debug\FAN.Nvelocity.dll
+C:\Users\Administrator\Documents\Visual Studio 2015\Projects\FAN.Projects\FAN.Common\FAN.Nvelocity\bin\Debug\FAN.Nvelocity.pdb
+C:\Users\Administrator\Documents\Visual Studio 2015\Projects\FAN.Projects\FAN.Common\FAN.Nvelocity\bin\Debug\AntiXSSLibrary.dll
+C:\Users\Administrator\Documents\Visual Studio 2015\Projects\FAN.Projects\FAN.Common\FAN.Nvelocity\bin\Debug\FAN.Helper.dll
+C:\Users\Administrator\Documents\Visual Studio 2015\Projects\FAN.Projects\FAN.Common\FAN.Nvelocity\bin\Debug\NVelocity.dll
+C:\Users\Administrator\Documents\Visual Studio 2015\Projects\FAN.Projects\FAN.Common\FAN.Nvelocity\bin\Debug\Newtonsoft.Json.dll
+C:\Users\Administrator\Documents\Visual Studio 2015\Projects\FAN.Projects\FAN.Common\FAN.Nvelocity\bin\Debug\FAN.Helper.pdb
+C:\Users\Administrator\Documents\Visual Studio 2015\Projects\FAN.Projects\FAN.Common\FAN.Nvelocity\obj\Debug\FAN.Nvelocity.csprojResolveAssemblyReference.cache
+C:\Users\Administrator\Documents\Visual Studio 2015\Projects\FAN.Projects\FAN.Common\FAN.Nvelocity\obj\Debug\FAN.Nvelocity.dll
+C:\Users\Administrator\Documents\Visual Studio 2015\Projects\FAN.Projects\FAN.Common\FAN.Nvelocity\obj\Debug\FAN.Nvelocity.pdb
+C:\Users\Administrator\Documents\Visual Studio 2015\Projects\FAN.Projects\FAN.Common\FAN.Nvelocity\bin\Debug\NPOI.dll
+C:\Users\Administrator\Documents\Visual Studio 2015\Projects\FAN.Projects\FAN.Common\FAN.Nvelocity\bin\Debug\Microsoft.Web.Administration.dll
+C:\Users\Administrator\Documents\Visual Studio 2015\Projects\FAN.Projects\FAN.Common\FAN.Nvelocity\bin\Debug\BouncyCastle.Crypto.dll
+C:\Users\Administrator\Documents\Visual Studio 2015\Projects\FAN.Projects\FAN.Common\FAN.Nvelocity\bin\Debug\DocX.dll
+C:\Users\Administrator\Documents\Visual Studio 2015\Projects\FAN.Projects\FAN.Common\FAN.Nvelocity\bin\Debug\TLZ.SharpZLib.dll
+C:\Users\Administrator\Documents\Visual Studio 2015\Projects\FAN.Projects\FAN.Common\FAN.Nvelocity\bin\Debug\DynamicExpresso.dll
+C:\Users\Administrator\Documents\Visual Studio 2015\Projects\FAN.Projects\FAN.Common\FAN.Nvelocity\bin\Debug\WebGrease.dll
+C:\Users\Administrator\Documents\Visual Studio 2015\Projects\FAN.Projects\FAN.Common\FAN.Nvelocity\bin\Debug\Yahoo.Yui.Compressor.dll
+C:\Users\Administrator\Documents\Visual Studio 2015\Projects\FAN.Projects\FAN.Common\FAN.Nvelocity\bin\Debug\System.Net.Http.Formatting.dll
+C:\Users\Administrator\Documents\Visual Studio 2015\Projects\FAN.Projects\FAN.Common\FAN.Nvelocity\bin\Debug\ICSharpCode.SharpZipLib.dll
+C:\Users\Administrator\Documents\Visual Studio 2015\Projects\FAN.Projects\FAN.Common\FAN.Nvelocity\bin\Debug\EcmaScript.NET.dll
+C:\Users\Administrator\Documents\Visual Studio 2015\Projects\FAN.Projects\FAN.Common\FAN.Nvelocity\bin\Debug\TLZ.SharpZLib.pdb
+C:\Users\Administrator\Documents\Visual Studio 2015\Projects\FAN.Projects\FAN.Common\FAN.Nvelocity\bin\Debug\DynamicExpresso.pdb
+C:\Users\Administrator\Documents\Visual Studio 2015\Projects\FAN.Projects\FAN.Common\FAN.Nvelocity\bin\Debug\AutoMapper.dll
+C:\Users\Administrator\Documents\Visual Studio 2015\Projects\FAN.Projects\FAN.Common\FAN.Nvelocity\bin\Debug\FAN.Nvelocity.dll.config
+C:\Users\Administrator\Documents\Visual Studio 2015\Projects\FAN.Projects\FAN.Common\FAN.Nvelocity\bin\Debug\AutoMapper.xml
+C:\FAN.Projects\FAN.Common\FAN.Nvelocity\bin\Debug\FAN.Nvelocity.dll.config
+C:\FAN.Projects\FAN.Common\FAN.Nvelocity\bin\Debug\FAN.Nvelocity.dll
+C:\FAN.Projects\FAN.Common\FAN.Nvelocity\bin\Debug\FAN.Nvelocity.pdb
+C:\FAN.Projects\FAN.Common\FAN.Nvelocity\bin\Debug\AntiXSSLibrary.dll
+C:\FAN.Projects\FAN.Common\FAN.Nvelocity\bin\Debug\FAN.Helper.dll
+C:\FAN.Projects\FAN.Common\FAN.Nvelocity\bin\Debug\NVelocity.dll
+C:\FAN.Projects\FAN.Common\FAN.Nvelocity\bin\Debug\NPOI.dll
+C:\FAN.Projects\FAN.Common\FAN.Nvelocity\bin\Debug\Newtonsoft.Json.dll
+C:\FAN.Projects\FAN.Common\FAN.Nvelocity\bin\Debug\Microsoft.Web.Administration.dll
+C:\FAN.Projects\FAN.Common\FAN.Nvelocity\bin\Debug\BouncyCastle.Crypto.dll
+C:\FAN.Projects\FAN.Common\FAN.Nvelocity\bin\Debug\DocX.dll
+C:\FAN.Projects\FAN.Common\FAN.Nvelocity\bin\Debug\TLZ.SharpZLib.dll
+C:\FAN.Projects\FAN.Common\FAN.Nvelocity\bin\Debug\AutoMapper.dll
+C:\FAN.Projects\FAN.Common\FAN.Nvelocity\bin\Debug\DynamicExpresso.dll
+C:\FAN.Projects\FAN.Common\FAN.Nvelocity\bin\Debug\WebGrease.dll
+C:\FAN.Projects\FAN.Common\FAN.Nvelocity\bin\Debug\Yahoo.Yui.Compressor.dll
+C:\FAN.Projects\FAN.Common\FAN.Nvelocity\bin\Debug\System.Net.Http.Formatting.dll
+C:\FAN.Projects\FAN.Common\FAN.Nvelocity\bin\Debug\ICSharpCode.SharpZipLib.dll
+C:\FAN.Projects\FAN.Common\FAN.Nvelocity\bin\Debug\EcmaScript.NET.dll
+C:\FAN.Projects\FAN.Common\FAN.Nvelocity\bin\Debug\FAN.Helper.pdb
+C:\FAN.Projects\FAN.Common\FAN.Nvelocity\bin\Debug\TLZ.SharpZLib.pdb
+C:\FAN.Projects\FAN.Common\FAN.Nvelocity\bin\Debug\AutoMapper.xml
+C:\FAN.Projects\FAN.Common\FAN.Nvelocity\bin\Debug\DynamicExpresso.pdb
+C:\FAN.Projects\FAN.Common\FAN.Nvelocity\obj\Debug\FAN.Nvelocity.csprojResolveAssemblyReference.cache
+C:\FAN.Projects\FAN.Common\FAN.Nvelocity\obj\Debug\FAN.Nvelocity.dll
+C:\FAN.Projects\FAN.Common\FAN.Nvelocity\obj\Debug\FAN.Nvelocity.pdb

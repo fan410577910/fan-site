@@ -1,0 +1,5 @@
+C:\FAN.Projects\FAN.WindowsService\FAN.Search.CreateIndex.Console\bin\Release\FAN.Search.CreateIndex.Console.dll
+C:\FAN.Projects\FAN.WindowsService\FAN.Search.CreateIndex.Console\bin\Release\FAN.Search.CreateIndex.Console.pdb
+C:\FAN.Projects\FAN.WindowsService\FAN.Search.CreateIndex.Console\obj\Release\FAN.Search.CreateIndex.Console.csprojResolveAssemblyReference.cache
+C:\FAN.Projects\FAN.WindowsService\FAN.Search.CreateIndex.Console\obj\Release\FAN.Search.CreateIndex.Console.dll
+C:\FAN.Projects\FAN.WindowsService\FAN.Search.CreateIndex.Console\obj\Release\FAN.Search.CreateIndex.Console.pdb

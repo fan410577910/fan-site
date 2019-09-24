@@ -1,0 +1,16 @@
+C:\Users\Administrator\Documents\Visual Studio 2015\Projects\FAN.Projects\FAN.Common\FAN.SharpZLib\bin\Release\TLZ.SharpZLib.dll
+C:\Users\Administrator\Documents\Visual Studio 2015\Projects\FAN.Projects\FAN.Common\FAN.SharpZLib\bin\Release\TLZ.SharpZLib.pdb
+C:\Users\Administrator\Documents\Visual Studio 2015\Projects\FAN.Projects\FAN.Common\FAN.SharpZLib\obj\Release\FAN.SharpZLib.csprojResolveAssemblyReference.cache
+C:\Users\Administrator\Documents\Visual Studio 2015\Projects\FAN.Projects\FAN.Common\FAN.SharpZLib\obj\Release\TLZ.SharpZLib.dll
+C:\Users\Administrator\Documents\Visual Studio 2015\Projects\FAN.Projects\FAN.Common\FAN.SharpZLib\obj\Release\TLZ.SharpZLib.pdb
+C:\FAN.Projects\FAN.Common\FAN.SharpZLib\bin\Release\TLZ.SharpZLib.dll
+C:\FAN.Projects\FAN.Common\FAN.SharpZLib\bin\Release\TLZ.SharpZLib.pdb
+C:\FAN.Projects\FAN.Common\FAN.SharpZLib\obj\Release\FAN.SharpZLib.csprojResolveAssemblyReference.cache
+C:\FAN.Projects\FAN.Common\FAN.SharpZLib\obj\Release\TLZ.SharpZLib.dll
+C:\FAN.Projects\FAN.Common\FAN.SharpZLib\obj\Release\TLZ.SharpZLib.pdb
+E:\FAN.Projects\FAN.Common\FAN.SharpZLib\bin\Release\TLZ.SharpZLib.dll
+E:\FAN.Projects\FAN.Common\FAN.SharpZLib\bin\Release\TLZ.SharpZLib.pdb
+E:\FAN.Projects\FAN.Common\FAN.SharpZLib\obj\Release\FAN.SharpZLib.csprojAssemblyReference.cache
+E:\FAN.Projects\FAN.Common\FAN.SharpZLib\obj\Release\FAN.SharpZLib.csproj.CoreCompileInputs.cache
+E:\FAN.Projects\FAN.Common\FAN.SharpZLib\obj\Release\TLZ.SharpZLib.dll
+E:\FAN.Projects\FAN.Common\FAN.SharpZLib\obj\Release\TLZ.SharpZLib.pdb

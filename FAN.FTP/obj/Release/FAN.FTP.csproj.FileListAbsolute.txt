@@ -1,0 +1,11 @@
+C:\FAN.Projects\FAN.FTP\bin\Release\FAN.FTP.dll
+C:\FAN.Projects\FAN.FTP\bin\Release\FAN.FTP.pdb
+C:\FAN.Projects\FAN.FTP\obj\Release\FAN.FTP.csprojResolveAssemblyReference.cache
+C:\FAN.Projects\FAN.FTP\obj\Release\FAN.FTP.dll
+C:\FAN.Projects\FAN.FTP\obj\Release\FAN.FTP.pdb
+E:\FAN.Projects\FAN.FTP\bin\Release\FAN.FTP.dll
+E:\FAN.Projects\FAN.FTP\bin\Release\FAN.FTP.pdb
+E:\FAN.Projects\FAN.FTP\obj\Release\FAN.FTP.csprojAssemblyReference.cache
+E:\FAN.Projects\FAN.FTP\obj\Release\FAN.FTP.csproj.CoreCompileInputs.cache
+E:\FAN.Projects\FAN.FTP\obj\Release\FAN.FTP.dll
+E:\FAN.Projects\FAN.FTP\obj\Release\FAN.FTP.pdb

@@ -1,0 +1,1 @@
+C:\FAN.Projects\FAN.WindowsService\FAN.Search.CreateIndex.Host\obj\Release\FAN.Search.CreateIndex.Host.csprojResolveAssemblyReference.cache

@@ -1,0 +1,8 @@
+E:\FAN.Projects\WindowsService1\bin\Debug\WindowsService1.exe.config
+E:\FAN.Projects\WindowsService1\bin\Debug\WindowsService1.exe
+E:\FAN.Projects\WindowsService1\bin\Debug\WindowsService1.pdb
+E:\FAN.Projects\WindowsService1\obj\Debug\WindowsService1.ProjectInstaller.resources
+E:\FAN.Projects\WindowsService1\obj\Debug\WindowsService1.csproj.GenerateResource.cache
+E:\FAN.Projects\WindowsService1\obj\Debug\WindowsService1.csproj.CoreCompileInputs.cache
+E:\FAN.Projects\WindowsService1\obj\Debug\WindowsService1.exe
+E:\FAN.Projects\WindowsService1\obj\Debug\WindowsService1.pdb

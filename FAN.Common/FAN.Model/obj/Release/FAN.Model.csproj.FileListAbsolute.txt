@@ -1,0 +1,5 @@
+C:\FAN.Projects\FAN.Common\FAN.Model\bin\Release\FAN.Model.dll
+C:\FAN.Projects\FAN.Common\FAN.Model\bin\Release\FAN.Model.pdb
+C:\FAN.Projects\FAN.Common\FAN.Model\obj\Release\FAN.Model.dll
+C:\FAN.Projects\FAN.Common\FAN.Model\obj\Release\FAN.Model.pdb
+C:\FAN.Projects\FAN.Common\FAN.Model\obj\Release\FAN.Model.csprojResolveAssemblyReference.cache

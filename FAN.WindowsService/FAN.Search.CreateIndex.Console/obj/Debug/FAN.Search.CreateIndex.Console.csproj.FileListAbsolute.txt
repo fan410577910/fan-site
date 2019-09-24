@@ -1,0 +1,4 @@
+C:\FAN.Projects\FAN.WindowsService\FAN.Search.CreateIndex.Console\bin\Debug\FAN.Search.CreateIndex.Console.dll
+C:\FAN.Projects\FAN.WindowsService\FAN.Search.CreateIndex.Console\bin\Debug\FAN.Search.CreateIndex.Console.pdb
+C:\FAN.Projects\FAN.WindowsService\FAN.Search.CreateIndex.Console\obj\Debug\FAN.Search.CreateIndex.Console.dll
+C:\FAN.Projects\FAN.WindowsService\FAN.Search.CreateIndex.Console\obj\Debug\FAN.Search.CreateIndex.Console.pdb

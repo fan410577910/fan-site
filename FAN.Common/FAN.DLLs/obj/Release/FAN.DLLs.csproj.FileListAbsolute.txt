@@ -1,0 +1,14 @@
+C:\Users\Administrator\Documents\Visual Studio 2015\Projects\FAN.Projects\FAN.Common\FAN.DLLs\bin\Release\FAN.DLLs.dll
+C:\Users\Administrator\Documents\Visual Studio 2015\Projects\FAN.Projects\FAN.Common\FAN.DLLs\bin\Release\FAN.DLLs.pdb
+C:\Users\Administrator\Documents\Visual Studio 2015\Projects\FAN.Projects\FAN.Common\FAN.DLLs\bin\Release\AutoMapper.dll
+C:\Users\Administrator\Documents\Visual Studio 2015\Projects\FAN.Projects\FAN.Common\FAN.DLLs\bin\Release\AutoMapper.xml
+C:\Users\Administrator\Documents\Visual Studio 2015\Projects\FAN.Projects\FAN.Common\FAN.DLLs\obj\Release\FAN.DLLs.csprojResolveAssemblyReference.cache
+C:\Users\Administrator\Documents\Visual Studio 2015\Projects\FAN.Projects\FAN.Common\FAN.DLLs\obj\Release\FAN.DLLs.dll
+C:\Users\Administrator\Documents\Visual Studio 2015\Projects\FAN.Projects\FAN.Common\FAN.DLLs\obj\Release\FAN.DLLs.pdb
+C:\FAN.Projects\FAN.Common\FAN.DLLs\bin\Release\FAN.DLLs.dll
+C:\FAN.Projects\FAN.Common\FAN.DLLs\bin\Release\FAN.DLLs.pdb
+C:\FAN.Projects\FAN.Common\FAN.DLLs\bin\Release\AutoMapper.dll
+C:\FAN.Projects\FAN.Common\FAN.DLLs\bin\Release\AutoMapper.xml
+C:\FAN.Projects\FAN.Common\FAN.DLLs\obj\Release\FAN.DLLs.csprojResolveAssemblyReference.cache
+C:\FAN.Projects\FAN.Common\FAN.DLLs\obj\Release\FAN.DLLs.dll
+C:\FAN.Projects\FAN.Common\FAN.DLLs\obj\Release\FAN.DLLs.pdb

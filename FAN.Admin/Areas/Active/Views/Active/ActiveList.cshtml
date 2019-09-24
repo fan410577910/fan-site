@@ -1,0 +1,1049 @@
+﻿@using System;
+@using System.Collections.Generic
+@using FAN.Entity
+@using FAN.Helper
+@using FAN.Enum
+@using FAN.Admin.Components
+@model Active_info
+@ViewContext
+@{
+    ViewBag.BodyAttr = "class=\"easyui-layout\"";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+    ViewBag.Title = "ActiveInfoList";
+    const string BTN_ADD = "btnActiveMenuAdd";
+    const string BTN_EDIT = "btnActiveMenuEdit";
+    const string BTN_DELETE = "btnActiveMenuDelete";
+
+    const string BTN_ADD_DETAIL = "btnAddDetail";
+    const string BTN_COPY_DETAIL = "btnCopyDetail";
+    const string BTN_TOP = "btnTop";
+    List<Active_info> activeList = ViewBag.ActiveList as List<Active_info>;
+    string activeListStr = JsonHelper.ConvertJsonToStr(activeList.Select(a => new { a.ID, a.Name }));
+}
+<script type="text/javascript">
+    var activeList = @Html.Raw(@activeListStr);
+    /*分类数据*/
+    var categoryData = @EasyUI.EnumFilterData(typeof(EActive_List_ScopeLeiMuOrPinLei));
+    //产品类型
+    var productTypeData=@EasyUI.EnumFilterData(typeof(EActive_List_ScopeProductSKUorSPU));
+    //优惠类型
+    var discountTypeData=@EasyUI.EnumFilterData(false,  null, 0,new[]{ EActive_List_DiscountType.优惠券,EActive_List_DiscountType.会员});
+    //使用平台
+    var platFormData=@EasyUI.EnumFilterData(typeof(EPlatform));
+</script>
+<div class="easyui-layout" data-options="fit:true">
+    <!--活动菜单-->
+    <div data-options="region:'west',title:'目录',split:true,disabled:false" style="width: 200px">
+        <div style="padding: 2px; border-bottom: solid 1px #ccc;">
+            @EasyUI.PlainButton("新增", BTN_ADD, "icon-add")
+            @EasyUI.PlainButton("编辑", BTN_EDIT, "icon-edit")
+            @*@EasyUI.PlainButton("删除", BTN_DELETE, "icon-delete")*@
+        </div>
+        <div>
+            <ul id="leftMenu"></ul>
+        </div>
+    </div>
+    <div data-options="region:'center'">
+        <div id="toolbar" style="padding: 5px;">
+            <div>
+                @EasyUI.PlainButton("新增", BTN_ADD_DETAIL, "icon-add")
+                @EasyUI.PlainButton("复制添加", BTN_COPY_DETAIL, "icon-add")
+                @EasyUI.PlainButton("置顶", BTN_TOP, "icon-upload")
+            </div>
+            <table style="height: 30px;">
+                <tr>
+                    <td class="toolsbar-title">筛选条件：</td>
+                    <td>
+                        <div id="filterBar"></div>
+                    </td>
+                </tr>
+            </table>
+            <div>
+                <table>
+                    <tr>
+                        <td class="toolsbar-title">当前活动：</td>
+                        <td>
+                            <span id="activePath" class="searchbox menu-active filterBar-item filterBar-none">所有活动</span>
+                        </td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+        <table id="view"></table>
+        <div id="dialogDiv"></div>
+    </div>
+</div>
+<!--活动规则新增和复制添加Modal-->
+<div id="dialog" style="display:none;">
+    <form id="form">
+        <h3 class="form-title">活动基本信息</h3>
+        @this.Html.Hidden(Active_info._ACTIVENAMEID_)
+        <table class="form">
+            <tr>
+                <td class="form-label"><sup>*</sup>规则名称：</td>
+                <td class="form-editor" colspan="3">
+                    @Html.TextBoxFor(u => u.Name, new
+               {
+                   style = "width:400px",
+                   @class = "easyui-validatebox",
+                   required = "true",
+                   placeholder = "请输入规则名称",
+                   onkeyup = "this.value=this.value.replace(/^ +| +$/g,'')"
+
+               })
+                </td>
+            </tr>
+            <tr>
+                <td class="form-label">提示信息：</td>
+                <td class="form-editor" colspan="3">
+                    @Html.TextBoxFor(u => u.Tips, new
+               {
+                   style = "width:400px",
+                   @class = "easyui-validatebox",
+                   placeholder = "请输入规则名称",
+                   onkeyup = "this.value=this.value.replace(/^ +| +$/g,'')"
+               })
+                </td>
+            </tr>
+            <tr>
+                <td class="form-label"><sup>*</sup>活动时间：</td>
+                <td class="form-editor" colspan="3">
+                    @Html.TextBoxFor(u => u.StartTime, new
+               {
+                   style = "width:200px",
+                   @class = "easyui-datetimebox",
+                   required = "true",
+                   editable = "false",
+                   ValidType = "startDate['StartTime']",
+                   invalidMessage = "活动开始时间必须大于当前系统时间"
+
+               })-
+                    @Html.TextBoxFor(u => u.EndTime, new
+               {
+                   style = "width:200px",
+                   @class = "easyui-datetimebox",
+                   required = "true",
+                   editable = "false",
+                   ValidType = "validateDate['StartTime']",
+                   invalidMessage = "活动结束时间必须大于当前开始时间"
+               })
+                    <span title="此设置为北京时间" class="help"></span>
+                </td>
+            </tr>
+            <tr>
+                <td class="form-label"><sup>*</sup>使用平台：</td>
+                <td class="form-editor">
+                    <script>
+                        platFormData.each(function (i, item) {
+                            if (item.value>-1) {
+                                document.write('<label><input type="checkbox" value="' + item.value + '" name="@Active_info._PLATFORMJSON_" />' + item.text + '</label>');
+                            }
+                        });
+                    </script>
+
+                </td>
+            </tr>
+        </table>
+        <h3 class="form-title">优惠设置</h3>
+        <table class="form">
+            <tr>
+                <td class="form-label"><sup>*</sup>包含优惠方式：</td>
+                <td class="form-editor">
+                    @Html.EnumDropDownList(EActive_List_DiscountType.按SKU赠送产品, Active_info._DISCOUNTTYPEUSE_, Active_info._DISCOUNTTYPEUSE_, new[]
+                    {
+                        EActive_List_DiscountType.优惠券,
+                        EActive_List_DiscountType.会员
+                    }, false, new { style = "width:410px;", @class = "easyui-combobox", editable = "false", required = "true" })
+                </td>
+            </tr>
+            <tr>
+                <td class="form-label">排除优惠方式：</td>
+                <td class="form-editor">
+                    @this.Html.DropDownList(Active_info._DISCOUNTTYPEEXCLUDEJSON_, new List<SelectListItem>(), new { @class = "easyui-combobox", style = "width: 410px;", data_options = "data:discountTypeData,multiple:true, editable:false" })
+                </td>
+            </tr>
+
+        </table>
+        <h3 class="form-title">商品设置</h3>
+        <table class="form">
+            <tr>
+                <td class="form-label">选择：</td>
+                <td class="form-editor">
+                    <script>
+                        categoryData.each(function (i, item) {
+                            if (item.value>-1) {
+                                var ck="";
+                                if (i==1) {
+                                    ck = "checked";
+                                }
+                                document.write('<label><input type="radio" value="' + item.value + '" name="cate"  '+ck+'  text=' + item.text + ' _options="categoryType">' + item.text + '</label>');
+                            }
+                        });
+                    </script>
+                    <script>
+                        productTypeData.each(function (i, item) {
+                            if (item.value>-1) {
+                                document.write('<label><input type="radio" value="' + item.value + '" name="cate" text=' + item.text + ' _options="productType" >' + item.text + '</label>');
+                            }
+                        });
+                    </script>
+                </td>
+            </tr>
+            <tr class="leimu">
+                <td class="form-label">包含<span data-field="category">类目</span>：</td>
+                <td class="form-editor" id="fenlei">
+                    <input id="@Active_info._SCOPEFENLEIINCLUDEJSON_" name="@Active_info._SCOPEFENLEIINCLUDEJSON_" style="width: 400px" type="text" value="" />
+                </td>
+                <td class="form-editor" id="pinpai" style="display:none">
+                    <input id="Brand" name="Brand" type="text" value="" />
+                    <span title="可以筛选编号、品牌全称、品牌简称、品牌中文." class="help"></span>
+                </td>
+                <td class="form-editor" id="fengge" style="display:none">
+                    <input id="Style" name="Style" type="text" />
+                    <span title="只获取启用风格词" class="help"></span>
+                </td>
+            </tr>
+            <tr class="leimu">
+                <td class="form-label"><span>排除SPU</span>：</td>
+                <td class="form-editor">
+                    @Html.TextAreaFor(u => u.ScopeProductExcludeJSON, new
+               {
+                   style = "width:400px;height:36px;",
+                   @class = "easyui-validatebox;",
+                   @disabled = "disabled",
+                   placeholder = "SPU ID,多个ID之间用‘,’隔开"
+               })
+                </td>
+            </tr>
+            <tr class="spu" style="display:none">
+                <td class="form-label">包含<span data-field="product">SPU</span>：</td>
+                <td class="form-editor">
+                    @Html.TextAreaFor(u => u.ScopeProductIncludeJSON, new
+               {
+                   style = "width:400px;height:36px;",
+                   @class = "easyui-validatebox;",
+                   @disabled = "disabled",
+                   placeholder = "SPU ID,多个ID之间用‘,’隔开"
+               })
+                </td>
+            </tr>
+        </table>
+    </form>
+</div>
+
+<script>  
+    setTimeout(function () {
+        $(".help").tooltip();
+    }, 0);
+    var cache = {
+        view: $("#view"),
+        dialog: $("#dialogDiv"),
+        leftMenu: $("#leftMenu"),
+        activePath: $("#activePath"),
+        toolbar: $("#toolbar"),
+        filterBar: $("#filterBar"),
+        form: $("#form"),
+        categoryTree: $("#@Active_info._SCOPEFENLEIINCLUDEJSON_"),
+        dataUrl: "",
+        leimuUrl: "/ProductLeiMu/ProductLeiMu/GetLeiMuTreeData?isAllDisplay="+false,
+        categoryUrl: "/api/category/gettree/?callback=?",
+        leimuListData: null,
+        categoryListData: null,
+        imageUrl:''
+    };
+    //新增活动页面，类目、品类下拉框
+    //cache.categoryTree.combotree({
+    //    smooth: true,
+    //    checked: true,
+    //    multiple: true,
+    //    checkbox: true,
+    //    loadFilter: erp.filter.loadFilter,
+    //    url: cache.leimuUrl,
+    //    lines: true,
+    //});
+</script>
+<script>
+    function move(e, target, isUp,currentId) {
+        var $view = $(target).closest('div.datagrid-view');
+        var index = $(target).closest('tr.datagrid-row').attr('datagrid-row-index');
+        var $row = $view.find('tr[datagrid-row-index=' + index + ']');
+        var nextId = 0;
+        if (isUp) {
+            var upHtml=$row.prev().find("div").eq(4).html();
+            if (upHtml) {
+                nextId=parseInt(upHtml);
+            }
+        } else {
+            var downHtml=$row.next().find("div").eq(4).html();
+            if (downHtml) {
+                nextId=parseInt(downHtml);
+            }
+        }
+        var data =
+        {
+            currentId:currentId,
+            nextId:nextId
+        };
+        if (nextId>0) {
+            $.post("/Active/Active/UpdatePrioritySave",data, function (json) {
+                if (!json) { $("#msg").html("由于网络或服务器太忙，提交失败，请重试！"); return; }
+                if (json.Success == true) {
+                    erp.showInfo(json.Message);
+                    cache.view.datagrid('reload');
+                }
+                else {
+                    erp.showError(json.Message);
+                }
+            });
+        }
+        $row.removeClass('datagrid-row-over');
+        e.stopPropagation();
+    }
+
+    //绑定新增事件
+    $("#@BTN_ADD").on("click", function () {
+        $.easyui.showDialog({
+            title: "新增活动目录", width: 550, height: 450,
+            href: "/Active/Active/ActiveMenuAdd",
+            iniframe: true,
+            enableApplyButton: false,
+            onSave: function (obj) {
+                var iframe = $(this).dialog("iframe");
+                if (!iframe || iframe.length == 0) return;
+                var self = this;
+                iframe = iframe[0];
+                iframe.contentWindow.save(function (success, formData) {
+                    if (success) {
+                        location.reload();
+                        self.dialog("close");
+                    }
+                });
+                return false;
+            }
+        });
+    });
+
+    $("#@BTN_EDIT").on("click", function () {
+        var row = cache.leftMenu.tree('getSelected');
+        if (!row||row.id==0) {
+            erp.showInfo("请选择一个活动");
+            return;
+        }
+        $.easyui.showDialog({
+            title: '编辑目录', width: 550, height: 450,
+            iniframe: true,
+            modal: true,
+            enableSaveButton: false,
+            enableApplyButton: false,
+            enableCloseButton: false,
+            href: '/Active/Active/ActiveEdit/' + row.id,
+            buttons: [{
+                text: '确定',
+                iconCls: 'icon-ok',
+                handler: function () {
+                    var domFrame = $(this).dialog("iframe")[0];
+                    var self = this;
+                    domFrame.contentWindow.SureSumbit(cache, function () {
+                        location.reload();
+                        self.dialog("close");
+                    });
+                }
+            }, {
+                text: '关闭',
+                iconCls: 'icon-close',
+                handler: function () {
+                    this.dialog('close');
+                }
+            }
+            ]
+        });
+    });
+</script>
+
+<script>
+    var activePathChange = function (node) {
+        if (node.id==0) {
+            erp.filterLoad("@Active_info._ACTIVENAMEID_",{"Value":null});
+            cache.view.datagrid('showColumn',"排序");
+            $("#btnTop").show();
+        } else {
+            erp.filterLoad("@Active_info._ACTIVENAMEID_",{"Value":parseInt(node.id)});
+            cache.view.datagrid('hideColumn',"排序");
+            $("#btnTop").hide();
+        }
+        var parents = [node.text];
+        var n = cache.leftMenu.tree("getParent", node.target);
+        while (n && n.id) {
+            parents.push(n.text);
+            n = cache.leftMenu.tree("getParent", n.target);
+        }
+        parents.reverse();
+        cache.activePath.html(parents.join(' &gt; '));
+    };
+    cache.leftMenu.tree({
+        method: "post",
+        //lines: true,
+        //dnd: true,
+        url: "/Active/Active/GetActiveMenuData",
+        //smooth: true,
+        //queryParams: { "aaa": 0 },
+        //checkbox: false,
+        //parentField: "ParentID",
+        //toggleOnClick: false,
+        //onlyNodeExpand: false,
+        //loadFilter: function(json) {
+        //    return { rows: json.Data, total: json.Data.length };
+        //},//erp.filter.loadFilter,
+        formatter: function(node) {
+            var description=node.description;
+            if (description==null||description=="") {
+                description = node.text;
+            }
+            return "<span title="+description+">"+ node.text + "&nbsp;[" + node.id + "]"+"</span>";
+        },
+        onBeforeLoad: function(node, param) {
+            //if (!node || !param) {
+            //    return;
+            //}
+            //if (!node.attributes.hasChildren) {
+            //    return false;
+            //}
+            //var queryParams = $(this).tree("options").queryParams;
+            //queryParams.ActiveNameID = node.id;
+            //activePathChange(node);
+        },
+        onClick: function(node) {
+            //if (node.attributes && node.attributes.hasChildren==true&&node.id!=0) {
+            //    return false;
+            //}
+            //activeID= node.id;
+            //activePathChange(node);
+            //return false;
+        },
+        onLoadSuccess: function (row) {
+            //$(this).treegrid('enableDnd', row ? row.id : null);
+            //$.parser.parse();
+        },
+        onBeforeDrop: function (targetRow, sourceRow) {
+            //var obj = $(targetRow);
+            //var parentId = obj.attr("node-id");
+            //if (targetRow && obj&&parentId) {
+            //    var message = "确定移动" + sourceRow.text + "到" + obj.find("span:last").text() + "活动下吗？";
+            //    erp.confirm(message, function (yes) {
+            //        if (yes) {
+            //            erp.active.rowDrop(sourceRow.id, parentId);
+            //        }
+            //    });
+            //    return false;
+            //}
+        },
+        autoBindDblClickRow: false
+    });
+
+
+    $.extend(erp,{
+        filterData: {},
+        filterLoad: function (filterKey, value) {
+            erp.filterSetValue(filterKey, value);
+            cache.view.datagrid('options').queryParams = { "filter": JSON.stringify(erp.filterData) };
+            cache.view.datagrid('load');
+        },
+        filterBarHandle: function (elm, key, value) {
+            erp.filterLoad(key, value);
+        },
+        filterSetValue: function (filterKey, value) {
+            if (!filterKey) return;
+            if (!erp.filterData[filterKey]){
+                erp.filterData[filterKey] = value;
+            }else{
+                $.extend(true, erp.filterData[filterKey], value);
+            }
+            erp.filterBarRander();
+        },
+        filterBarRander: function () {
+            var m = erp.filter.barRander(cache.view, erp.filterData);
+            cache.filterBar.html(m);
+        },
+        filterReSet:function(filterKey,value){
+            erp.filterSetValue(filterKey,value);
+            cache.view.datagrid('options').queryParams={"filter": JSON.stringify(erp.filterData)};
+        },
+    });
+    erp.filterData= {};//@Html.Raw(JsonManager.Serialize(ViewBag.FilterData))
+
+    $.extend(erp,{
+        active: {
+            activeListDo: function(id, value, index) {/*修改活动状态，删除、暂停、启用*/
+                var data = {
+                    id: id,
+                    status: value
+                };
+                erp.confirm("确定执行当前操作吗？", function(yes) {
+                    if (yes) {
+                        $.post("/Active/Active/ActiveListDo", data, function(json) {
+                            if (json.Success == true) {
+                                erp.showInfo(json.Message);
+                                cache.view.datagrid('reload');
+                            } else {
+                                erp.showError(json.Message);
+                            }
+                        });
+                    }
+                });
+            },
+            rowDrop: function(sourceId, parentId) {/*移动活动菜单*/
+                $.post("/Active/Active/ActiveNameDropSave", { sourceID: sourceId, parentID: parentId }, function(json) {
+                    erp.wait(null);
+                    if (!json) {
+                        erp.showError("由于网络或服务器太忙，提交失败，请重试！");
+                        return;
+                    }
+                    if (json.Success) {
+                        erp.showInfo(json.Message);
+                        location.reload();
+                    } else {
+                        erp.showError(json.Message);
+                    }
+                });
+            },
+            activeDetailsSetting: function(activeListId) {/*设置条件，显示ActiveDetail页面*/
+                $.easyui.showDialog({
+                    title: '设置活动',
+                    fit: true,
+                    iniframe: true,
+                    modal: true,
+                    enableSaveButton: false,
+                    enableApplyButton: false,
+                    enableCloseButton: false,
+                    href: '/Active/Active/ActiveDetailsList?activeListId=' + activeListId,
+                    buttons: [
+                        {
+                            text: '关闭',
+                            iconCls: 'icon-close',
+                            handler: function() {
+                                this.dialog('close');
+                            }
+                        }
+                    ]
+                });
+            },
+            inputEnable:function() {
+                $("form[id='form'] :text").attr("disabled", "enable");
+                $("form[id='form'] textarea").attr("readonly", "readonly");
+                $("form[id='form'] :radio").attr("disabled", "enable");
+                $("form[id='form'] :checkbox").attr("disabled", "enable");
+                $("#@Active_info._ENDTIME_").datetimebox({
+                    disabled:false
+                });
+                $("#@Active_info._STARTTIME_").datetimebox({
+                    required:false,
+                    disabled:true
+                });
+                $("#@Active_info._DISCOUNTTYPEUSE_").combobox({
+                    hasDownArrow:false,
+                    disabled:true
+                });
+
+                $("#@Active_info._DISCOUNTTYPEEXCLUDEJSON_").combobox({
+                    hasDownArrow:false,
+                    disabled:true,
+                });
+                cache.categoryTree.combotree("disable");
+            },
+            inputDisable:function() {
+                $("form[id='form'] :text").removeAttr("disabled");
+                $("form[id='form'] textarea").removeAttr("readonly");
+                $("form[id='form'] :radio").removeAttr("disabled");
+                $("form[id='form'] :checkbox").removeAttr("disabled");
+                $("#@Active_info._STARTTIME_").datetimebox({
+                    required:true,
+                    disabled:false
+                });
+                $("#@Active_info._DISCOUNTTYPEUSE_").combobox({
+                    hasDownArrow:true,
+                    disabled:false
+                });
+                $("#@Active_info._DISCOUNTTYPEEXCLUDEJSON_").combobox({
+                    hasDownArrow:true,
+                    disabled:false
+                });
+                cache.categoryTree.combotree("enable");
+            }
+        }
+    });
+
+    cache.view.datagrid({
+        offset: { width: 0, height: 0 },
+        rownumbers: true,
+        toolbar: "#toolbar",
+        //singleSelect: true,
+        //selectOnCheck: false,
+        //checkOnSelect: true,
+        //striped: false,
+        pagination: true,
+        fit: true,
+        fitColumns: false,
+        idField: "ID",
+        loadMsg: "程序正在努力的加载数据 请稍候......",
+        url: '/Active/Active/GetActiveListData',
+        pageSize: 20,
+        pageNumber: 1,
+        pageList: [10, 20, 30],
+        queryParams: { "filter": JSON.stringify(erp.filterData) },
+        frozenColumns: [
+            [
+                {
+                    field: '操作',
+                    title: '操作',
+                    width: 150,
+                    formatter: function(value, row, index) {
+                        var html = [];
+                        var status = row.Status;
+                        var validate=row.DiscountTypeUse!='@EActive_List_DiscountType.优惠券.GetValue()'&&row.DiscountTypeUse!='@EActive_List_DiscountType.会员.GetValue()';
+                        if (status== 0) {
+                            //未开始,可删除
+                            html.push("<a href='javascript:void(0);' onclick='detailCart.edit(" + index + ");return false;'>编辑</a>&nbsp;&nbsp;");
+                            if (validate) {
+                                html.push("<a href='javascript:void(0);' onclick='erp.active.activeDetailsSetting("+ row.ID + ");return false;'>设置条件</a>&nbsp;&nbsp;");
+                            }
+                            html.push("<a href='javascript:void(0);' onclick='erp.active.activeListDo(" + row.ID + ","+@EActive_List_Status.已删除.GetValue() + ");return false;'>删除</a>&nbsp;&nbsp;");
+                        } else if (status == 1) {
+                            //暂停中,可重启
+                            html.push("<a href='javascript:void(0);' onclick='erp.active.activeListDo(" + row.ID + "," + @EActive_List_Status.进行中.GetValue() + ");return false;'>启动</a>&nbsp;&nbsp;");
+                            if (validate) {
+                                html.push("<a href='javascript:void(0);' onclick='erp.active.activeDetailsSetting(" + row.ID + ");return false;'>设置条件</a>&nbsp;&nbsp;");
+                            }
+                        } else if (status == 2) {
+                            //进行中,可暂停，可编辑活动结束时间
+                            html.push("<a href='javascript:void(0);' onclick='erp.active.activeListDo(" + row.ID + "," + @EActive_List_Status.暂停中.GetValue() + ");return false;'>暂停</a>&nbsp;&nbsp;");
+                            if (validate) {
+                                html.push("<a href='javascript:void(0);' onclick='detailCart.editEndTime(" + index + ");return false;'>编辑</a>&nbsp;&nbsp;");
+                                html.push("<a href='javascript:void(0);' onclick='erp.active.activeDetailsSetting(" + row.ID + ");return false;'>查看条件</a>&nbsp;&nbsp;");
+                            }
+                        } else {
+                            html.push("<a href='javascript:void(0);' onclick='detailCart.see(" + index + ");'>查看活动</a>&nbsp;&nbsp;");
+                            if (validate) {
+                                html.push("<a href='javascript:void(0);' onclick='erp.active.activeDetailsSetting("+ row.ID + ");return false;'>查看条件</a>&nbsp;&nbsp;");
+                            }
+                        }
+                        return html.join('');
+                    }
+                },
+                { field: '排序', title: '排序', width: 130,formatter:function(value,row,index){
+                    var html=[];
+                    html.push("<a class=\"easyui-linkbutton l-btn l-btn-plain\" data-options=\"plain:true,iconCls:'icon-up'\" >" +
+                        "<span class=\"l-btn-left\"><span class=\"l-btn-text icon-up l-btn-icon-left\" onclick=\"move(event,this,true,"+row.ID+")\">上移</span></span></a>");
+                    html.push("<a class=\"easyui-linkbutton l-btn l-btn-plain\" data-options=\"plain:true,iconCls:'icon-down'\"  >" +
+                        "<span class=\"l-btn-left\"><span class=\"l-btn-text icon-down l-btn-icon-left\" onclick=\"move(event,this,false,"+row.ID+")\">下移</span></span></a>");
+                    return html.join('');
+                }
+                },
+                { field: '@Active_info._ACTIVENAMEID_',title: '活动ID',width: 50,hidden:"true" },
+                {
+                    field: '@Active_info._ID_',title: '编号',width: 50,
+                    headerContextMenu: [
+                        {
+                            iconCls: "icon-standard-hmenu-asc",
+                            hideOnClick: function() { return false; },
+                            custom: {
+                                type: "searchbox",
+                                key: "@Active_info._ID_",
+                                range: false,
+                                value: "",
+                                onChange: function(value) {
+                                    if (value == ""){
+                                        erp.filterLoad(this.key, { "Value": null });
+                                    }else{
+                                        erp.filterLoad(this.key, { "Value": parseInt(value) });
+                                    }
+                                }
+                            }
+                        }
+                    ]
+                },
+                {
+                    field: '@Active_info._NAME_', title: '规则名称', width: 100,
+                    formatter:function(value, row, index){
+                        return '<span title="'+value+'" class="easyui-tooltip">'+value+'</span>';
+                    },
+                    headerContextMenu: [
+                        {
+                            iconCls: "icon-standard-hmenu-asc",
+                            hideOnClick: function() { return false; },
+                            custom: {
+                                type: "searchbox",
+                                key: "@Active_info._NAME_",
+                                range: false,
+                                value: "",
+                                onChange: function(value) {
+                                    if (value == ""){
+                                        erp.filterLoad(this.key, { "Value": null });
+                                    }else{
+                                        erp.filterLoad(this.key, { "Value": value });
+                                    }
+                                }
+                            }
+                        }
+                    ]
+                },
+                {
+                    field: '@Active_info._TIPS_', title: '提示信息', width: 100,
+                    formatter:function(value, row, index){
+                        return '<span title="'+value+'" class="easyui-tooltip">'+value+'</span>';
+                    },
+                    headerContextMenu: [
+                        {
+                            iconCls: "icon-standard-hmenu-asc",
+                            hideOnClick: function() { return false; },
+                            custom: {
+                                type: "searchbox",
+                                key: "@Active_info._TIPS_",
+                                range: false,
+                                value: "",
+                                onChange: function(value) {
+                                    if (value == ""){
+                                        erp.filterLoad(this.key, { "Value": null });
+                                    }else{
+                                        erp.filterLoad(this.key, { "Value": value });
+                                    }
+                                }
+                            }
+                        }
+                    ]
+                },
+                {
+                    field: '@Active_info._DISCOUNTTYPEUSE_',title: '优惠方式',width: 150,
+                    styler:function(value, row, index) {
+                        if (value=='@EActive_List_DiscountType.优惠券.GetValue()'||value=='@EActive_List_DiscountType.会员.GetValue()') {
+                            return 'background-color:#FFCC80;';
+                        }
+                        return '';
+                    },
+                    formatter: @EasyUI.EnumFormatter(typeof(EActive_List_DiscountType)),
+                    headerContextMenu: [{
+                        iconCls: "icon-standard-hmenu-asc",
+                        hideOnClick: function () { return false; },
+                        custom: {
+                            type: "combobox",
+                            key: "@Active_info._DISCOUNTTYPEUSE_",
+                            options: {
+                                width: 200,
+                                multiple:true
+                            },
+                            range: false,
+                            data:@EasyUI.EnumFilterData(typeof(EActive_List_DiscountType)),
+                            value: -1,
+                            onChange: function (values) {
+                                if(!values || values[0]==-1){
+                                    erp.filterLoad(this.key,{"Value":null});
+                                } else{
+                                    values=$.map(values,function(d){return parseInt(d); });
+                                    erp.filterLoad(this.key,{"Value":values});
+                                }
+                            }
+                        }
+                    }],
+
+                }
+            ]
+        ],
+        columns: [
+        [
+            {
+                field: '@Active_info._STATUS_',
+                title: '状态',
+                width: 100,
+                formatter: function(value, row, index) {
+                    switch (value) {
+                        case 0:
+                            return "<span>未开始</span>";
+                        case 1:
+                            return "<span>暂停中</span>";
+                        case 2:
+                            return "<span style='color:green'>进行中</span>";
+                        case 3:
+                            return "<span style='color:red'>已结束</span>";
+                        default:
+                    }
+                    return "";
+                },
+                headerContextMenu: [{
+                    iconCls: "icon-standard-hmenu-asc",
+                    hideOnClick: function () { return false; },
+                    custom: {
+                        type: "combobox",
+                        key: "@Active_info._STATUS_",
+                        range: false,
+                        data:@EasyUI.EnumFilterData(false,EActive_List_Status.已删除),
+                        options: {
+                            width: 200,
+                            multiple:true
+                        },
+                        value: -1,
+                        onChange: function (values) {
+                            if(!values || values[0]==-1){
+                                erp.filterLoad(this.key,{"Value":null});
+                            } else{
+                                values=$.map(values,function(d){return parseInt(d); });
+                                erp.filterLoad(this.key,{"Value":values});
+                            }
+
+
+                        }
+                    }
+                }]
+            },
+            {
+                field: '@Active_info._STARTTIME_', title: '开始时间', width: 100, formatter: erp.format.datetimeFormater,
+                headerContextMenu: [{
+                    iconCls: "icon-standard-hmenu-asc",
+                    hideOnClick: function () { return false; },
+                    custom: {
+                        type: "datetimebox",
+                        key: "@Active_info._STARTTIME_",
+                        range: true,
+                        value: { startValue: null, endValue: null },
+                        onChange: function (startValue, endValue) {
+                            erp.filterLoad(this.key,{"StartValue":startValue,"EndValue":endValue});
+                        }
+                    }
+                }]
+            },
+            {
+                field: '@Active_info._ENDTIME_', title: '结束时间', width: 100, formatter: erp.format.datetimeFormater,
+                headerContextMenu: [{
+                    iconCls: "icon-standard-hmenu-asc",
+                    hideOnClick: function () { return false; },
+                    custom: {
+                        type: "datetimebox",
+                        key: "@Active_info._ENDTIME_",
+                        range: true,
+                        value: { startValue: null, endValue: null },
+                        onChange: function (startValue, endValue) {
+                            erp.filterLoad(this.key,{"StartValue":startValue,"EndValue":endValue});
+                        }
+                    }
+                }]
+            },
+            {
+                field: '@Active_info._SCOPELEIMUORPINLEI_',
+                title: '分类类型',
+                width: 80,
+                formatter: @EasyUI.EnumFormatter(typeof (EActive_List_ScopeLeiMuOrPinLei)),
+                headerContextMenu: [
+                    {
+                        iconCls: "icon-standard-hmenu-asc",
+                        hideOnClick: function () { return false; },
+                        custom: {
+                            type: "combobox",
+                            key: "@Active_info._SCOPELEIMUORPINLEI_",
+                            range: false,
+                            value: -1,
+                            data: @EasyUI.EnumFilterData(typeof(EActive_List_ScopeLeiMuOrPinLei)),
+                            onChange: function(value) {
+                                if (value == "-1"){
+                                    erp.filterLoad(this.key,{"Value":null});
+                                } else{
+                                    erp.filterLoad(this.key,{"Value":value});
+                                }
+
+                            }
+                        }
+                    }
+                ]
+            },
+            {
+                field: '@Active_info._SCOPEFENLEIINCLUDEJSON_', title: '包含分类', width: 100,
+                formatter: function(value,row,index) {
+                    if (value!="[]"&&value!="[-1]") {
+                        return '<span title="'+value+'" class="easyui-tooltip">'+value+'</span>';
+                    }
+                    if (value=="[-1]") {
+                        return "<span style='color:red'>无</span>";
+                    }
+                    return "全部";
+                },
+                headerContextMenu: [
+                    {
+                        iconCls: "icon-standard-hmenu-asc",
+                        hideOnClick: function() { return false; },
+                        custom: {
+                            type: "searchbox",
+                            key: "@Active_info._SCOPEFENLEIINCLUDEJSON_",
+                            range: false,
+                            value: "",
+                            onChange: function(value) {
+                                if (value == ""){
+                                    erp.filterLoad(this.key, { "Value": null });
+                                }else{
+                                    erp.filterLoad(this.key, { "Value": value });
+                                }
+                            }
+                        }
+                    }
+                ]
+            },
+            {
+                field: '@Active_info._SCOPEPRODUCTEXCLUDEJSON_', title: '排除SPU', width: 100,
+                formatter: function(value) {
+                    if (value!="[]") {
+                        return value;
+                    }
+                    return "无";
+                },
+                headerContextMenu: [
+                    {
+                        iconCls: "icon-standard-hmenu-asc",
+                        hideOnClick: function() { return false; },
+                        custom: {
+                            type: "searchbox",
+                            key: "@Active_info._SCOPEPRODUCTEXCLUDEJSON_",
+                            range: false,
+                            value: "",
+                            onChange: function(value) {
+                                if (value == ""){
+                                    erp.filterLoad(this.key, { "Value": null });
+                                }else{
+                                    erp.filterLoad(this.key, { "Value": value });
+                                }
+                            }
+                        }
+                    }
+                ]
+            },
+            {
+                field: '@Active_info._SCOPEPRODUCTSKUORSPU_',title: '产品类型',width: 80,
+                formatter: @EasyUI.EnumFormatter(typeof(EActive_List_ScopeProductSKUorSPU)),
+                headerContextMenu: [
+                    {
+                        iconCls: "icon-standard-hmenu-asc",
+                        hideOnClick: function () { return false; },
+                        custom: {
+                            type: "combobox",
+                            key: "@Active_info._SCOPEPRODUCTSKUORSPU_",
+                            range: false,
+                            value: -1,
+                            data: @EasyUI.EnumFilterData(typeof(EActive_List_ScopeProductSKUorSPU)),
+                            onChange: function(value) {
+                                if (value == "-1"){
+                                    erp.filterLoad(this.key,{"Value":null});
+                                } else{
+                                    erp.filterLoad(this.key,{"Value":value});
+                                }
+
+                            }
+                        }
+                    }
+                ]
+            },
+            {
+                field: '@Active_info._SCOPEPRODUCTINCLUDEJSON_', title: '参与商品', width: 100,
+                formatter: function(value,row,index) {
+                    if (value!="[]"&&value!="[-1]") {
+                        return '<span title="'+value+'" class="easyui-tooltip">'+value+'</span>';
+                    }
+                    if (value=="[-1]") {
+                        return "<span style='color:red'>无</span>";
+                    }
+
+                    return "全部";
+                },
+                headerContextMenu: [
+                    {
+                        iconCls: "icon-standard-hmenu-asc",
+                        hideOnClick: function() { return false; },
+                        custom: {
+                            type: "searchbox",
+                            key: "@Active_info._SCOPEPRODUCTINCLUDEJSON_",
+                            range: false,
+                            value: "",
+                            onChange: function(value) {
+                                if (value == ""){
+                                    erp.filterLoad(this.key, { "Value": null });
+                                }else{
+                                    erp.filterLoad(this.key, { "Value": value });
+                                }
+                            }
+                        }
+                    }
+                ]
+            },
+
+            {
+                field: '@Active_info._DISCOUNTTYPEEXCLUDEJSON_',title: '排除优惠方式',width: 200,
+                formatter: function(value, row, index) {
+                    return discountTypeData.map(function(i, item) {
+                        if (value.contains(item.value)) {
+                            return item.text;
+                        }
+                        return null;
+                    }).join(',');
+                }
+            },
+            {
+                field: '@Active_info._PLATFORMJSON_',title: '使用平台',width: 60,
+                formatter: function(value, row, index) {
+                    return platFormData.map(function(i, item) {
+                        if (value.contains(item.value)) {
+                            return item.text;
+                        }
+                        return null;
+                    }).join(',');
+                }
+            },
+            {
+                field: '@Active_info._CREATEUSERNAME_', title: '创建人', width: 100,
+                headerContextMenu: [
+                    {
+                        //iconCls: "icon-standard-hmenu-asc",
+                        //hideOnClick: function() { return false; },
+                        custom: {
+                            type: "searchbox",
+                            key: "@Active_info._CREATEUSERNAME_",
+                            range: false,
+                            value: "",
+                            onChange: function(value) {
+                                if (value == ""){
+                                    erp.filterLoad(this.key, { "Value": null });
+                                }else{
+                                    erp.filterLoad(this.key, { "Value": value });
+                                }
+                            }
+                        }
+                    }
+                ]
+            },
+            {
+                field: '@Active_info._UPDATETIME_', title: '修改时间', width: 100, formatter: erp.format.datetimeFormater,
+                headerContextMenu: [{
+                    //iconCls: "icon-standard-hmenu-asc",
+                    //hideOnClick: function () { return false; },
+                    custom: {
+                        type: "datetimebox",
+                        key: "@Active_info._UPDATETIME_",
+                        range: true,
+                        value: { startValue: '2015-07-20 14:03:59', endValue: null },
+                        onChange: function (startValue, endValue) {
+                            erp.filterLoad(this.key,{"StartValue":startValue,"EndValue":endValue});
+                        }
+                    }
+                }]
+            }
+        ]],
+        onLoadSuccess:function(data) {
+            if (data && data.rows) {
+                data.rows.each(function(i,item) {
+                    item.@Active_info._DISCOUNTTYPEEXCLUDEJSON_ = JSON.parse(item.@Active_info._DISCOUNTTYPEEXCLUDEJSON_);
+                    item.@Active_info._PLATFORMJSON_ = JSON.parse(item.@Active_info._PLATFORMJSON_);
+                });
+            }
+        },
+        enableHeaderClickMenu: true,
+        enableHeaderContextMenu: true,
+        toggleOnClick: true,
+        loadFilter: erp.filter.loadFilter,
+        onSortColumnBefore:erp.filterSortHandle
+    });
+    erp.filterBarRander();
+
+</script>

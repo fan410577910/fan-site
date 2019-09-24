@@ -1,0 +1,17 @@
+C:\Users\Administrator\Documents\Visual Studio 2015\Projects\FAN.Projects\FAN.Common\FAN.SharpZLib\obj\Debug\FAN.SharpZLib.csprojResolveAssemblyReference.cache
+C:\Users\Administrator\Documents\Visual Studio 2015\Projects\FAN.Projects\FAN.Common\FAN.SharpZLib\obj\Debug\TLZ.SharpZLib.dll
+C:\Users\Administrator\Documents\Visual Studio 2015\Projects\FAN.Projects\FAN.Common\FAN.SharpZLib\obj\Debug\TLZ.SharpZLib.pdb
+C:\Users\Administrator\Documents\Visual Studio 2015\Projects\FAN.Projects\FAN.Common\FAN.SharpZLib\bin\Debug\TLZ.SharpZLib.dll
+C:\Users\Administrator\Documents\Visual Studio 2015\Projects\FAN.Projects\FAN.Common\FAN.SharpZLib\bin\Debug\TLZ.SharpZLib.pdb
+C:\FAN.Projects\FAN.Common\FAN.SharpZLib\bin\Debug\TLZ.SharpZLib.dll
+C:\FAN.Projects\FAN.Common\FAN.SharpZLib\bin\Debug\TLZ.SharpZLib.pdb
+C:\FAN.Projects\FAN.Common\FAN.SharpZLib\obj\Debug\TLZ.SharpZLib.dll
+C:\FAN.Projects\FAN.Common\FAN.SharpZLib\obj\Debug\TLZ.SharpZLib.pdb
+C:\FAN.Projects\FAN.Common\FAN.SharpZLib\obj\Debug\FAN.SharpZLib.csprojAssemblyReference.cache
+C:\FAN.Projects\FAN.Common\FAN.SharpZLib\obj\Debug\FAN.SharpZLib.csproj.CoreCompileInputs.cache
+E:\FAN.Projects\FAN.Common\FAN.SharpZLib\bin\Debug\TLZ.SharpZLib.dll
+E:\FAN.Projects\FAN.Common\FAN.SharpZLib\bin\Debug\TLZ.SharpZLib.pdb
+E:\FAN.Projects\FAN.Common\FAN.SharpZLib\obj\Debug\FAN.SharpZLib.csprojAssemblyReference.cache
+E:\FAN.Projects\FAN.Common\FAN.SharpZLib\obj\Debug\FAN.SharpZLib.csproj.CoreCompileInputs.cache
+E:\FAN.Projects\FAN.Common\FAN.SharpZLib\obj\Debug\TLZ.SharpZLib.dll
+E:\FAN.Projects\FAN.Common\FAN.SharpZLib\obj\Debug\TLZ.SharpZLib.pdb

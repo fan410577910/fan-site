@@ -1,0 +1,5 @@
+C:\Projects\TLZ.COM.Common\TLZ.WebStyle\bin\Debug\TLZ.WebStyle.dll
+C:\Projects\TLZ.COM.Common\TLZ.WebStyle\bin\Debug\TLZ.WebStyle.pdb
+C:\Projects\TLZ.COM.Common\TLZ.WebStyle\obj\Debug\TLZ.WebStyle.dll
+C:\Projects\TLZ.COM.Common\TLZ.WebStyle\obj\Debug\TLZ.WebStyle.pdb
+C:\Projects\TLZ.COM.Common\TLZ.WebStyle\obj\Debug\TLZ.WebStyle.csprojResolveAssemblyReference.cache

@@ -1,0 +1,9 @@
+C:\FAN.Projects\CoreDemo\FAN.DAL\bin\Debug\netstandard2.0\FAN.DAL.deps.json
+C:\FAN.Projects\CoreDemo\FAN.DAL\bin\Debug\netstandard2.0\FAN.DAL.dll
+C:\FAN.Projects\CoreDemo\FAN.DAL\bin\Debug\netstandard2.0\FAN.DAL.pdb
+C:\FAN.Projects\CoreDemo\FAN.DAL\obj\Debug\netstandard2.0\FAN.DAL.csprojAssemblyReference.cache
+C:\FAN.Projects\CoreDemo\FAN.DAL\obj\Debug\netstandard2.0\FAN.DAL.csproj.CoreCompileInputs.cache
+C:\FAN.Projects\CoreDemo\FAN.DAL\obj\Debug\netstandard2.0\FAN.DAL.AssemblyInfoInputs.cache
+C:\FAN.Projects\CoreDemo\FAN.DAL\obj\Debug\netstandard2.0\FAN.DAL.AssemblyInfo.cs
+C:\FAN.Projects\CoreDemo\FAN.DAL\obj\Debug\netstandard2.0\FAN.DAL.dll
+C:\FAN.Projects\CoreDemo\FAN.DAL\obj\Debug\netstandard2.0\FAN.DAL.pdb

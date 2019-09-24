@@ -1,0 +1,5 @@
+C:\Projects\TLZ.COM.Common\TLZ.SharpZLib\bin\Debug\TLZ.SharpZLib.dll
+C:\Projects\TLZ.COM.Common\TLZ.SharpZLib\bin\Debug\TLZ.SharpZLib.pdb
+C:\Projects\TLZ.COM.Common\TLZ.SharpZLib\obj\Debug\TLZ.SharpZLib.dll
+C:\Projects\TLZ.COM.Common\TLZ.SharpZLib\obj\Debug\TLZ.SharpZLib.pdb
+C:\Projects\TLZ.COM.Common\TLZ.SharpZLib\obj\Debug\TLZ.SharpZLib.csprojResolveAssemblyReference.cache

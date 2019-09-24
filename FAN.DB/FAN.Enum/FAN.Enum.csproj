@@ -1,0 +1,87 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{7BC5039C-121B-473F-8D57-07D229A1193C}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>FAN.Enum</RootNamespace>
+    <AssemblyName>FAN.Enum</AssemblyName>
+    <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="EActivePageEntryType.cs" />
+    <Compile Include="EActive_Details_IsShowGift.cs" />
+    <Compile Include="EActive_Details_RuleProductCondition.cs" />
+    <Compile Include="EActive_Details_Status.cs" />
+    <Compile Include="EActive_Details_UserLevel.cs" />
+    <Compile Include="EActive_List_DiscountType.cs" />
+    <Compile Include="EActive_List_ExpressGroup.cs" />
+    <Compile Include="EActive_List_IsCoupon.cs" />
+    <Compile Include="EActive_List_Platform.cs" />
+    <Compile Include="EActive_List_ScopeLeiMuOrPinLei.cs" />
+    <Compile Include="EActive_List_ScopeProductSKUorSPU.cs" />
+    <Compile Include="EActive_List_SettingType.cs" />
+    <Compile Include="EActive_List_Status.cs" />
+    <Compile Include="EActive_ShipState.cs" />
+    <Compile Include="EnumType.cs" />
+    <Compile Include="EOrderSate.cs" />
+    <Compile Include="EOrderTrackStep.cs" />
+    <Compile Include="EOrder_Detail_BackgroundOrderDetailState.cs" />
+    <Compile Include="EOrder_Detail_ItemType.cs" />
+    <Compile Include="EOrder_Detail_OrderDetailState.cs" />
+    <Compile Include="EOrder_detail_UnitSize.cs" />
+    <Compile Include="EOrder_Master_BackgroundOrderMasterState.cs" />
+    <Compile Include="EOrder_Master_IsDangerOrder.cs" />
+    <Compile Include="EOrder_Master_IsDisputedOrder.cs" />
+    <Compile Include="EOrder_Master_IsNoRegister.cs" />
+    <Compile Include="EOrder_Master_OrderMasterState.cs" />
+    <Compile Include="EOrder_Master_SKUState.cs" />
+    <Compile Include="EOrder_Shopcart_ItemType.cs" />
+    <Compile Include="EOrder_Shopcart_ShopType.cs" />
+    <Compile Include="EOrder_ShopCart_State.cs" />
+    <Compile Include="EOrder_Type.cs" />
+    <Compile Include="EPayPalPaymentStatus.cs" />
+    <Compile Include="EPayType.cs" />
+    <Compile Include="EPlatform.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

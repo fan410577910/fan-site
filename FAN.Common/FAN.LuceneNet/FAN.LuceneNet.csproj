@@ -1,0 +1,140 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{8B143A48-4A0A-43CB-8979-CA6A49CD0DB1}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>FAN.LuceneNet</RootNamespace>
+    <AssemblyName>FAN.LuceneNet</AssemblyName>
+    <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Lucene.Net">
+      <HintPath>..\FAN.DLLs\Lucene.Net.dll</HintPath>
+    </Reference>
+    <Reference Include="Lucene.Net.Contrib.Analyzers">
+      <HintPath>..\FAN.DLLs\Lucene.Net.Contrib.Analyzers.dll</HintPath>
+    </Reference>
+    <Reference Include="Lucene.Net.Contrib.Highlighter">
+      <HintPath>..\FAN.DLLs\Lucene.Net.Contrib.Highlighter.dll</HintPath>
+    </Reference>
+    <Reference Include="Lucene.Net.Contrib.Memory">
+      <HintPath>..\FAN.DLLs\Lucene.Net.Contrib.Memory.dll</HintPath>
+    </Reference>
+    <Reference Include="Lucene.Net.Contrib.Snowball">
+      <HintPath>..\FAN.DLLs\Lucene.Net.Contrib.Snowball.dll</HintPath>
+    </Reference>
+    <Reference Include="Lucene.Net.CWSharp">
+      <HintPath>..\FAN.DLLs\Lucene.Net.CWSharp.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.configuration" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AnalyzerBus.cs" />
+    <Compile Include="Collector\GroupCollector.cs" />
+    <Compile Include="Collector\GroupField.cs" />
+    <Compile Include="Collector\TopScoreDocCollectorWrapper.cs" />
+    <Compile Include="Config\LuceneNetConfig.cs" />
+    <Compile Include="Culture\Language.cs" />
+    <Compile Include="CustomScore\CustomScoreInfo.cs" />
+    <Compile Include="CustomScore\CustomScoreProviderEx.cs" />
+    <Compile Include="CustomScore\CustomScoreQueryEx.cs" />
+    <Compile Include="CustomScore\CustomSimilarity.cs" />
+    <Compile Include="CustomScore\CustomWeightInfo.cs" />
+    <Compile Include="CustomScore\CustomWeightProviderEx.cs" />
+    <Compile Include="CustomScore\CustomWeightQueryEx.cs" />
+    <Compile Include="Dict\AnalyzerDict.cs" />
+    <Compile Include="Dict\CustomScoreDict.cs" />
+    <Compile Include="Dict\FilterDict.cs" />
+    <Compile Include="Dict\LanguageDict.cs" />
+    <Compile Include="Dict\SnowballDict.cs" />
+    <Compile Include="Dict\SynonymDict.cs" />
+    <Compile Include="Dict\TokenizerDict.cs" />
+    <Compile Include="Extend\TopScoreDocCollectorEx.cs" />
+    <Compile Include="Filter\FilterEx.cs" />
+    <Compile Include="Filter\FilterInfo.cs" />
+    <Compile Include="Group\GroupCollectorField.cs" />
+    <Compile Include="Group\GroupCollectorWrapper.cs" />
+    <Compile Include="LuceneBus.Boost.cs" />
+    <Compile Include="LuceneBus.Convert.cs" />
+    <Compile Include="LuceneBus.cs" />
+    <Compile Include="LuceneBus.Delete.cs" />
+    <Compile Include="LuceneBus.Directory.cs" />
+    <Compile Include="LuceneBus.Document.cs" />
+    <Compile Include="LuceneBus.Group.cs" />
+    <Compile Include="LuceneBus.HighLight.cs" />
+    <Compile Include="LuceneBus.Insert.cs" />
+    <Compile Include="LuceneBus.KeyWord.cs" />
+    <Compile Include="LuceneBus.Reader.cs" />
+    <Compile Include="LuceneBus.Searcher.cs" />
+    <Compile Include="LuceneBus.Select.cs" />
+    <Compile Include="LuceneBus.Tool.cs" />
+    <Compile Include="LuceneBus.Update.cs" />
+    <Compile Include="LuceneBus.WebPage.cs" />
+    <Compile Include="LuceneBus.Writer.cs" />
+    <Compile Include="LuceneNetCache.cs" />
+    <Compile Include="LuceneNetCacheInfo.cs" />
+    <Compile Include="Model\ColumnField.cs" />
+    <Compile Include="Model\DynamicClassEx.cs" />
+    <Compile Include="Model\EncodingType.cs" />
+    <Compile Include="Model\FieldType.cs" />
+    <Compile Include="Model\GroupModel.cs" />
+    <Compile Include="Model\ObjectExtensions.cs" />
+    <Compile Include="Parser\QueryParserEx.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="SerializeHelper.cs" />
+    <Compile Include="SplitWordTool.cs" />
+    <Compile Include="StopWord\StopWord.cs" />
+    <Compile Include="Symbol\SymbolAnalyzer.cs" />
+    <Compile Include="Symbol\SymbolTokenzier.cs" />
+    <Compile Include="Synonyms\SynonymsFilter.cs" />
+    <Compile Include="Test\TestAnalyzer.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="XML\analyzer-chasen.xml" />
+    <Content Include="XML\analyzer-mecab.xml" />
+    <Content Include="XML\CustomScore.xml" />
+    <Content Include="XML\FilterInfo.xml" />
+    <Content Include="XML\LanguageDict.xml" />
+    <Content Include="XML\Stopword.txt" />
+    <Content Include="XML\Synonym.txt" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

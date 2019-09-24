@@ -1,0 +1,143 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{6665EB94-2A19-4FFF-9561-AE1633B01DDA}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>FAN.RabbitMQ</RootNamespace>
+    <AssemblyName>FAN.RabbitMQ</AssemblyName>
+    <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Newtonsoft.Json">
+      <HintPath>..\FAN.DLLs\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="RabbitMQ.Client">
+      <HintPath>..\FAN.DLLs\RabbitMQ.Client.dll</HintPath>
+    </Reference>
+    <Reference Include="RabbitMQ.ServiceModel">
+      <HintPath>..\FAN.DLLs\RabbitMQ.ServiceModel.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.configuration" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AmqpExceptions\AmpqExceptionGrammar.cs" />
+    <Compile Include="AmqpExceptions\AmqpException.cs" />
+    <Compile Include="Attribute\RabbitMQMetaAttribute.cs" />
+    <Compile Include="Autofac\DefaultServiceProvider.cs" />
+    <Compile Include="Autofac\IContainer.cs" />
+    <Compile Include="Bus\RabbitAdvancedBus.Binding.cs" />
+    <Compile Include="Bus\RabbitAdvancedBus.Consume.cs" />
+    <Compile Include="Bus\RabbitAdvancedBus.cs" />
+    <Compile Include="Bus\RabbitAdvancedBus.Exchange.cs" />
+    <Compile Include="Bus\RabbitAdvancedBus.Publish.cs" />
+    <Compile Include="Bus\RabbitAdvancedBus.Queue.cs" />
+    <Compile Include="Channel\ChannelEvent.cs" />
+    <Compile Include="Channel\PersistentChannel.cs" />
+    <Compile Include="Channel\PersistentChannelFactory.cs" />
+    <Compile Include="ConnectionString\ConnectionConfiguration.cs" />
+    <Compile Include="ConnectionString\ConnectionStringGrammar.cs" />
+    <Compile Include="ConnectionString\ConnectionStringParser.cs" />
+    <Compile Include="Connection\ClusterHostSelectionStrategy.cs" />
+    <Compile Include="Connection\ConnectionEvent.cs" />
+    <Compile Include="Connection\ConnectionFactoryInfo.cs" />
+    <Compile Include="Connection\ConnectionFactoryWrapper.cs" />
+    <Compile Include="Connection\PersistentConnection.cs" />
+    <Compile Include="Consumer\AckStrategies.cs" />
+    <Compile Include="Consumer\ConsumerCancellation.cs" />
+    <Compile Include="Consumer\ConsumerConfiguration.cs" />
+    <Compile Include="Consumer\ConsumerDispatcher.cs" />
+    <Compile Include="Consumer\ConsumerErrorStrategy.cs" />
+    <Compile Include="Consumer\ConsumerExecutionContext.cs" />
+    <Compile Include="Consumer\ConsumerFactory.cs" />
+    <Compile Include="Consumer\ConsumerModelDisposedEvent.cs" />
+    <Compile Include="Consumer\Conventions.cs" />
+    <Compile Include="Consumer\HandlerRunner.cs" />
+    <Compile Include="Consumer\IConsumer.cs" />
+    <Compile Include="Consumer\InternalConsumer.cs" />
+    <Compile Include="Consumer\InternalConsumerFactory.cs" />
+    <Compile Include="Consumer\MessageReceivedInfo.cs" />
+    <Compile Include="Consumer\PersistentConsumer.cs" />
+    <Compile Include="Consumer\StoppedConsumingEvent.cs" />
+    <Compile Include="Consumer\SubscriptionConfiguration.cs" />
+    <Compile Include="Consumer\TransientConsumer.cs" />
+    <Compile Include="Logger\ConsoleLogger.cs" />
+    <Compile Include="Producer\ClientCommandDispatcherSingleton.cs" />
+    <Compile Include="Producer\ConfirmedMessageEvent.cs" />
+    <Compile Include="Producer\ConfirmedMessageTimeOutEvent.cs" />
+    <Compile Include="Producer\IPublisher.cs" />
+    <Compile Include="Producer\MessageConfirmedInfo.cs" />
+    <Compile Include="Producer\MessageConfirmedTimeOutInfo.cs" />
+    <Compile Include="Producer\MessageProperties.cs" />
+    <Compile Include="Producer\MessageReturnedInfo.cs" />
+    <Compile Include="Producer\PublisherBase.cs" />
+    <Compile Include="Producer\PublisherBasic.cs" />
+    <Compile Include="Producer\PublisherConfirms.cs" />
+    <Compile Include="Producer\PublisherFactory.cs" />
+    <Compile Include="Producer\ReturnedMessageEvent.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="RabbitHutch.cs" />
+    <Compile Include="Sprache\Failure.cs" />
+    <Compile Include="Sprache\IFailure.cs" />
+    <Compile Include="Sprache\Input.cs" />
+    <Compile Include="Sprache\IResultOfT.cs" />
+    <Compile Include="Sprache\ISuccess.cs" />
+    <Compile Include="Sprache\Parse.cs" />
+    <Compile Include="Sprache\ParseException.cs" />
+    <Compile Include="Sprache\ParserOfT.cs" />
+    <Compile Include="Sprache\ResultHelper.cs" />
+    <Compile Include="Sprache\Success.cs" />
+    <Compile Include="Tools\EventBus.cs" />
+    <Compile Include="Tools\LinqExtensions.cs" />
+    <Compile Include="Tools\Preconditions.cs" />
+    <Compile Include="Tools\TaskHelpers.cs" />
+    <Compile Include="Tools\TypeNameSerializer.cs" />
+    <Compile Include="Topology\Binding.cs" />
+    <Compile Include="Topology\Error.cs" />
+    <Compile Include="Topology\Exchange.cs" />
+    <Compile Include="Topology\ExchangeType.cs" />
+    <Compile Include="Topology\IBindable.cs" />
+    <Compile Include="Topology\IBinding.cs" />
+    <Compile Include="Topology\IExchange.cs" />
+    <Compile Include="Topology\IQueue.cs" />
+    <Compile Include="Topology\Queue.cs" />
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

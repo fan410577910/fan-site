@@ -1,0 +1,14 @@
+C:\Users\Administrator\Documents\Visual Studio 2015\Projects\FAN.Projects\FAN.DB\FAN.Entity\bin\Debug\FAN.Entity.dll
+C:\Users\Administrator\Documents\Visual Studio 2015\Projects\FAN.Projects\FAN.DB\FAN.Entity\bin\Debug\FAN.Entity.pdb
+C:\Users\Administrator\Documents\Visual Studio 2015\Projects\FAN.Projects\FAN.DB\FAN.Entity\obj\Debug\FAN.Entity.csprojResolveAssemblyReference.cache
+C:\Users\Administrator\Documents\Visual Studio 2015\Projects\FAN.Projects\FAN.DB\FAN.Entity\obj\Debug\FAN.Entity.dll
+C:\Users\Administrator\Documents\Visual Studio 2015\Projects\FAN.Projects\FAN.DB\FAN.Entity\obj\Debug\FAN.Entity.pdb
+C:\FAN.Projects\FAN.DB\FAN.Entity\bin\Debug\FAN.Entity.dll
+C:\FAN.Projects\FAN.DB\FAN.Entity\bin\Debug\FAN.Entity.pdb
+C:\FAN.Projects\FAN.DB\FAN.Entity\obj\Debug\FAN.Entity.dll
+C:\FAN.Projects\FAN.DB\FAN.Entity\obj\Debug\FAN.Entity.pdb
+C:\FAN.Projects\FAN.DB\FAN.Entity\bin\Debug\FAN.Model.dll
+C:\FAN.Projects\FAN.DB\FAN.Entity\bin\Debug\FAN.Model.pdb
+C:\FAN.Projects\FAN.DB\FAN.Entity\obj\Debug\FAN.Entity.csprojAssemblyReference.cache
+C:\FAN.Projects\FAN.DB\FAN.Entity\obj\Debug\FAN.Entity.csproj.CoreCompileInputs.cache
+C:\FAN.Projects\FAN.DB\FAN.Entity\obj\Debug\FAN.Entity.csproj.CopyComplete

@@ -1,0 +1,8 @@
+C:\FAN.Projects\FAN.Common\FAN.RabbitMQ\obj\Debug\FAN.RabbitMQ.csprojResolveAssemblyReference.cache
+C:\FAN.Projects\FAN.Common\FAN.RabbitMQ\bin\Debug\FAN.RabbitMQ.dll
+C:\FAN.Projects\FAN.Common\FAN.RabbitMQ\bin\Debug\FAN.RabbitMQ.pdb
+C:\FAN.Projects\FAN.Common\FAN.RabbitMQ\bin\Debug\Newtonsoft.Json.dll
+C:\FAN.Projects\FAN.Common\FAN.RabbitMQ\bin\Debug\RabbitMQ.Client.dll
+C:\FAN.Projects\FAN.Common\FAN.RabbitMQ\bin\Debug\RabbitMQ.ServiceModel.dll
+C:\FAN.Projects\FAN.Common\FAN.RabbitMQ\obj\Debug\FAN.RabbitMQ.dll
+C:\FAN.Projects\FAN.Common\FAN.RabbitMQ\obj\Debug\FAN.RabbitMQ.pdb

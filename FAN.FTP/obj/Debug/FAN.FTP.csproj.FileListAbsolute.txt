@@ -1,0 +1,5 @@
+C:\FAN.Projects\FAN.FTP\bin\Debug\FAN.FTP.dll
+C:\FAN.Projects\FAN.FTP\bin\Debug\FAN.FTP.pdb
+C:\FAN.Projects\FAN.FTP\obj\Debug\FAN.FTP.csprojResolveAssemblyReference.cache
+C:\FAN.Projects\FAN.FTP\obj\Debug\FAN.FTP.dll
+C:\FAN.Projects\FAN.FTP\obj\Debug\FAN.FTP.pdb

@@ -1,0 +1,5 @@
+C:\FAN.Projects\FAN.Common\FAN.Remoting\obj\Debug\FAN.Remoting.csprojResolveAssemblyReference.cache
+C:\FAN.Projects\FAN.Common\FAN.Remoting\bin\Debug\FAN.Remoting.dll
+C:\FAN.Projects\FAN.Common\FAN.Remoting\bin\Debug\FAN.Remoting.pdb
+C:\FAN.Projects\FAN.Common\FAN.Remoting\obj\Debug\FAN.Remoting.dll
+C:\FAN.Projects\FAN.Common\FAN.Remoting\obj\Debug\FAN.Remoting.pdb

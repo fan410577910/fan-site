@@ -1,0 +1,11 @@
+C:\FAN.Projects\FAN.Core.Console\bin\Debug\netcoreapp2.2\FAN.Core.Console.deps.json
+C:\FAN.Projects\FAN.Core.Console\bin\Debug\netcoreapp2.2\FAN.Core.Console.runtimeconfig.json
+C:\FAN.Projects\FAN.Core.Console\bin\Debug\netcoreapp2.2\FAN.Core.Console.runtimeconfig.dev.json
+C:\FAN.Projects\FAN.Core.Console\bin\Debug\netcoreapp2.2\FAN.Core.Console.dll
+C:\FAN.Projects\FAN.Core.Console\obj\Debug\netcoreapp2.2\FAN.Core.Console.csprojAssemblyReference.cache
+C:\FAN.Projects\FAN.Core.Console\obj\Debug\netcoreapp2.2\FAN.Core.Console.csproj.CoreCompileInputs.cache
+C:\FAN.Projects\FAN.Core.Console\obj\Debug\netcoreapp2.2\FAN.Core.Console.AssemblyInfoInputs.cache
+C:\FAN.Projects\FAN.Core.Console\obj\Debug\netcoreapp2.2\FAN.Core.Console.AssemblyInfo.cs
+C:\FAN.Projects\FAN.Core.Console\bin\Debug\netcoreapp2.2\FAN.Core.Console.pdb
+C:\FAN.Projects\FAN.Core.Console\obj\Debug\netcoreapp2.2\FAN.Core.Console.dll
+C:\FAN.Projects\FAN.Core.Console\obj\Debug\netcoreapp2.2\FAN.Core.Console.pdb

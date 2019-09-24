@@ -1,0 +1,15 @@
+{
+  "Hosts": {
+    "Protocols": {
+      "Http": {
+        "Address": "0.0.0.0",
+        "Port": "35986"
+      },
+      "Https": {
+        "Address": "0.0.0.0",
+        "Port": "7443"
+      }
+    }
+  },
+  "server.urls": "http://cart.tidebuy.net:35986;https://cart.tidebuy.net:7443"
+}

@@ -1,0 +1,45 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ArrayOfCustomScoreInfo xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <CustomScoreInfo>
+    <FieldType>String</FieldType>
+    <FieldName>Title</FieldName>
+    <WordScores>
+      <WordScore>
+        <Word>dress</Word>
+        <Quotiety>9.5</Quotiety>
+      </WordScore>
+      <WordScore>
+        <Word>train</Word>
+        <Quotiety>8</Quotiety>
+      </WordScore>
+    </WordScores>
+  </CustomScoreInfo>
+  <CustomScoreInfo>
+    <FieldType>Int32</FieldType>
+    <FieldName>ID</FieldName>
+    <WordScores>
+      <WordScore>
+        <Word>1</Word>
+        <Quotiety>9.5</Quotiety>
+      </WordScore>
+      <WordScore>
+        <Word>2</Word>
+        <Quotiety>8</Quotiety>
+      </WordScore>
+    </WordScores>
+  </CustomScoreInfo>
+  <CustomScoreInfo>
+    <FieldType>DateTime</FieldType>
+    <FieldName>AddDate</FieldName>
+    <WordScores>
+      <WordScore>
+        <Word>2011-11-1</Word>
+        <Quotiety>9.5</Quotiety>
+      </WordScore>
+      <WordScore>
+        <Word>2011-11-11</Word>
+        <Quotiety>8</Quotiety>
+      </WordScore>
+    </WordScores>
+  </CustomScoreInfo>
+</ArrayOfCustomScoreInfo>

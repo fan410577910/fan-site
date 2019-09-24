@@ -1,0 +1,3 @@
+C:\FAN.Projects\FAN.WindowsService\FAN.MongoDB.Service\obj\Debug\FAN.MongoDB.Service.csprojResolveAssemblyReference.cache
+C:\FAN.Projects\FAN.WindowsService\FAN.MongoDB.Service\obj\Debug\FAN.MongoDB.Service.ProjectInstaller.resources
+C:\FAN.Projects\FAN.WindowsService\FAN.MongoDB.Service\obj\Debug\FAN.MongoDB.Service.csproj.GenerateResource.Cache

@@ -1,0 +1,137 @@
+﻿@{
+    Layout = "~/Views/Shared/_Layout.cshtml";
+    ViewBag.Title = "后台系统";
+    ViewBag.BodyAttr = "class=\"easyui-layout\"";
+}
+@Scripts.Render("~/Scripts/jquery_easyui/extend/tree_search.js")
+<!--左边菜单-->
+<div data-options="region:'west',title:'菜单目录',split:true" style="width: 260px;">
+    <input type="text" id="textSearch" autocomplete="off" data-options="prompt: '菜单搜索'" style="height: 20px; width: 96%; ime-mode: active" class="easyui-validatebox" />
+    <ul id="left_menu"></ul>
+</div>
+<!--页面主体-->
+<div data-options="region:'center',split:true">
+    <div id="tab" class="easyui-tabs">
+        <div data-options="title:'首页',iconCls:'icon-home',closable:true,iniframe:true,href:'/Home/welcome',fit:true" style="overflow: hidden;">
+        </div>
+    </div>
+</div>
+<!--底部-->
+<div data-options="region:'south',title:'',split:false" style="height: 30px; overflow: hidden; border-top-style: none;">
+    <table style="width: 100%;">
+        <tr>
+            <td style="width: 200px; text-align: left;"><span style="line-height: 25px;">版本：@Html.Raw(ViewBag.AssemblyVersion)</span></td>
+            <td style="width: auto; text-align: center;"><span style="line-height: 25px;">版权：北京踏浪者科技有限公司 Coming soon ASP.NET Core on Linux</span></td>
+            <td style="width: 305px; text-align: left;">
+                <table style="width: 100%;">
+                    <tr>
+                        <td>
+                            @EasyUI.PlainButton("", "exit", "icon-logout", new { title = "注销登陆", href = "/Account/Auth/Logout/" })
+                            @EasyUI.PlainButton("", "updatePwd", "icon-edit", new { title = "修改密码" })
+                            @EasyUI.PlainButton("", "btnFullScreen", "icon-zoom", new { title = "全屏模式切换" })
+                        </td>
+                        <td>
+                            <div class="datagrid-btn-separator"></div>
+                            <span style="line-height: 25px;">页面主题：</span><select id="themeSelector"></select>
+                        </td>
+                    </tr>
+                </table>
+            </td>
+        </tr>
+    </table>
+</div>
+@section footer{
+    <script type="text/javascript">
+    var cache = {
+        updatePwd: $('#updatePwd'),
+        $leftMenu: $('#left_menu')
+    };
+    /*切换主题*/
+    $("#themeSelector").combobox({
+        width: 140,
+        editable: true,
+        data: $.easyui.theme.dataSource,
+        valueField: "path",
+        textField: "name",
+        value: $.easyui.theme.dataSource[0].path,//$.cookie("themeName") || $.easyui.theme.dataSource[0].path,
+        onSelect: function (record) {
+            var opts = $(this).combobox("options");
+            erp.ui.changeTheme(record[opts.valueField]);
+        }
+    });
+    var $tabPages = $('#tab').tabs({
+        border: false,
+        fit: true,
+        lineHeight: 0
+    });
+    var navMenu = cache.$leftMenu.tree({
+        method: "post",
+        lines: true,
+        url: "/Home/GetMenuData",
+        smooth: true,
+        checkbox: false,
+        toggleOnClick: true,
+        onClick: function (node) {
+            erp.tabShow(node.text, node.attributes.description, node.iconCls);
+        },
+        onCollapse: function (node) {
+            if (node.id == "00000000-0000-0000-0000-000000000000") {
+                $(this).tree("collapseAll");
+            }
+        },
+        onLoadSuccess: function (node) {
+            $(this).tree("collapseAll");
+            $('#left_menu').find('[node-id=00000000-0000-0000-0000-000000000000]').click();
+        }
+    });
+    /*全屏显示*/
+    $("#btnFullScreen").click(function () {
+        if ($.util.fullScreen.supports) {
+            if ($.util.fullScreen.isFullScreen()) {
+                $.util.cancelFullScreen();
+            } else {
+                $.util.requestFullScreen();
+            }
+        } else {
+            erp.showError("当前浏览器不支持全屏 API，请更换至最新的 Chrome/Firefox/Safari 浏览器或通过 F11 快捷键进行操作。");
+        }
+    });
+    /*修改密码*/
+    cache.updatePwd.bind("click",
+        function () {
+            $.easyui.showDialog({
+                title: "修改密码",
+                width: 400,
+                height: 300,
+                href: "/Account/Account/ChangePassword",
+                iniframe: true,
+                enableApplyButton: false,
+                onSave: function (obj) {
+                    var iframe = $(this).dialog("iframe");
+                    if (!iframe || iframe.length == 0) return;
+                    var self = this;
+                    iframe = iframe[0];
+                    iframe.contentWindow.save(function (success) {
+                        if (success === true) {
+                            top.window.location.replace("/Account/Auth/Logout/");
+                        }
+                    });
+                    return false;
+                }
+
+            });
+        });
+
+    $(function () {
+        $("#textSearch").on("keyup", function () {
+            cache.$leftMenu.tree("search", $(this).val());
+            if ($(this).val() === "" || null == $(this).val()) {
+                $('#left_menu').tree("expandAll");
+            }
+            return true;
+        });
+
+    });
+</script>
+    }
+

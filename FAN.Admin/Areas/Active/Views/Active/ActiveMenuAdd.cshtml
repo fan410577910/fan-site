@@ -1,0 +1,69 @@
+﻿@using FAN.Entity
+@model ActiveMenu_info
+@{
+    Layout = "~/Views/Shared/_Layout.cshtml";
+    ViewBag.Title = "活动菜单添加";
+}
+
+    <form id="form">
+        <table class="form">
+            <tr>
+                <td class="form-label"><sup>*</sup>所属目录：</td>
+                <td class="form-editor">
+                    @this.Html.Hidden(ActiveMenu_info._PARENTID_)
+                </td>
+            </tr>
+            <tr>
+                <td class="form-label"><sup>*</sup>目录名称：</td>
+                <td class="form-editor">@Html.TextBoxFor(u => u.Name, new { style = "width:300px", @class = "easyui-validatebox", required = "true", maxlength = "50" })</td>
+            </tr>
+            <tr>
+                <td class="form-label">目录描述：</td>
+                <td class="form-editor">@Html.TextAreaFor(u => u.Description, new { style = "width:300px;height:100px;", @class = "easyui-validatebox", maxlength = "50" })</td>
+            </tr>
+        </table>
+    </form>
+
+<script type="text/javascript">
+    $(function () {
+        $('#@ActiveMenu_info._PARENTID_').combotree({
+            width: 300,
+            required: true,
+            //loadFilter: erp.filter.loadFilter,
+            enableContextMenu: false,
+            url: "/Active/Active/GetActiveMenuData",
+            onSelect: function (node) {
+                //$('#@ActiveMenu_info._PARENTID_').combobox("textbox").attr("class", "combo-text validatebox-text " + node.iconCls).css({ "background-position-x": 3 });
+            }
+        });
+        console.info($('#@ActiveMenu_info._PARENTID_').combobox("textbox").css({ "padding-left": 20, "width": 260 }));
+
+    });
+
+    var cache = {
+        form: $("#form")
+    };
+
+    function save(callBack) {
+        var isValid = cache.form.form('validate');
+        if (!isValid) {
+            erp.showError("请检查输入！");
+            return;
+        }
+        erp.wait("正在提交数据...");
+        var data = cache.form.serializeObject();
+        $.post("/Active/Active/ActiveMenuAddSave", data, function (json) {
+            erp.wait(null);
+            if (!json) { erp.showError("由于网络或服务器太忙，提交失败，请重试！"); return; }
+            if (json.Success == false) {
+                erp.showError(json.Message);
+                return;
+            };
+            erp.showInfo(json.Message);
+            if ($.isFunction(callBack)) {
+                callBack.call(this, true, data);
+            }
+        });
+    }
+</script>
+

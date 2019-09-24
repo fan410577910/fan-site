@@ -1,0 +1,13 @@
+﻿正在安装程序集“E:\FAN.Projects\FAN.WindowsService\SyncImage\FAN.SyncImage.Service\bin\Debug\FAN.SyncImage.Service.exe”。
+受影响的参数是:
+   logtoconsole = 
+   logfile = E:\FAN.Projects\FAN.WindowsService\SyncImage\FAN.SyncImage.Service\bin\Debug\FAN.SyncImage.Service.InstallLog
+   assemblypath = E:\FAN.Projects\FAN.WindowsService\SyncImage\FAN.SyncImage.Service\bin\Debug\FAN.SyncImage.Service.exe
+正在安装服务 FAN.SyncImage.Service...
+已成功安装服务 FAN.SyncImage.Service。
+正在日志 Application 中创建 EventLog 源 FAN.SyncImage.Service...
+正在提交程序集“E:\FAN.Projects\FAN.WindowsService\SyncImage\FAN.SyncImage.Service\bin\Debug\FAN.SyncImage.Service.exe”。
+受影响的参数是:
+   logtoconsole = 
+   logfile = E:\FAN.Projects\FAN.WindowsService\SyncImage\FAN.SyncImage.Service\bin\Debug\FAN.SyncImage.Service.InstallLog
+   assemblypath = E:\FAN.Projects\FAN.WindowsService\SyncImage\FAN.SyncImage.Service\bin\Debug\FAN.SyncImage.Service.exe

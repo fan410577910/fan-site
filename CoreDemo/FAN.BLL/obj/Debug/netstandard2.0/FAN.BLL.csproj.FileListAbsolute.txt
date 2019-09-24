@@ -1,0 +1,12 @@
+C:\FAN.Projects\CoreDemo\FAN.BLL\bin\Debug\netstandard2.0\FAN.BLL.deps.json
+C:\FAN.Projects\CoreDemo\FAN.BLL\bin\Debug\netstandard2.0\FAN.BLL.dll
+C:\FAN.Projects\CoreDemo\FAN.BLL\bin\Debug\netstandard2.0\FAN.BLL.pdb
+C:\FAN.Projects\CoreDemo\FAN.BLL\bin\Debug\netstandard2.0\FAN.DAL.dll
+C:\FAN.Projects\CoreDemo\FAN.BLL\bin\Debug\netstandard2.0\FAN.DAL.pdb
+C:\FAN.Projects\CoreDemo\FAN.BLL\obj\Debug\netstandard2.0\FAN.BLL.csprojAssemblyReference.cache
+C:\FAN.Projects\CoreDemo\FAN.BLL\obj\Debug\netstandard2.0\FAN.BLL.csproj.CoreCompileInputs.cache
+C:\FAN.Projects\CoreDemo\FAN.BLL\obj\Debug\netstandard2.0\FAN.BLL.AssemblyInfoInputs.cache
+C:\FAN.Projects\CoreDemo\FAN.BLL\obj\Debug\netstandard2.0\FAN.BLL.AssemblyInfo.cs
+C:\FAN.Projects\CoreDemo\FAN.BLL\obj\Debug\netstandard2.0\FAN.BLL.csproj.CopyComplete
+C:\FAN.Projects\CoreDemo\FAN.BLL\obj\Debug\netstandard2.0\FAN.BLL.dll
+C:\FAN.Projects\CoreDemo\FAN.BLL\obj\Debug\netstandard2.0\FAN.BLL.pdb

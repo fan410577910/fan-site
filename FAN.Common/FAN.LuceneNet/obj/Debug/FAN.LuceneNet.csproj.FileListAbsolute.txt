@@ -1,0 +1,1 @@
+C:\FAN.Projects\FAN.Common\FAN.LuceneNet\obj\Debug\FAN.LuceneNet.csprojResolveAssemblyReference.cache

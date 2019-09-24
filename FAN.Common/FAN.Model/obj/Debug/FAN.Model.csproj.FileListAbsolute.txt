@@ -1,0 +1,6 @@
+C:\FAN.Projects\FAN.Common\FAN.Model\bin\Debug\FAN.Model.dll
+C:\FAN.Projects\FAN.Common\FAN.Model\bin\Debug\FAN.Model.pdb
+C:\FAN.Projects\FAN.Common\FAN.Model\obj\Debug\FAN.Model.dll
+C:\FAN.Projects\FAN.Common\FAN.Model\obj\Debug\FAN.Model.pdb
+C:\FAN.Projects\FAN.Common\FAN.Model\obj\Debug\FAN.Model.csprojAssemblyReference.cache
+C:\FAN.Projects\FAN.Common\FAN.Model\obj\Debug\FAN.Model.csproj.CoreCompileInputs.cache
